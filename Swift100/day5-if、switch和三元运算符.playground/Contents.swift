@@ -152,3 +152,10 @@ case 2:
 default:
     print("A partridge in a pear tree")
 }
+
+/// 4、如何使用三元条件运算符进行快速测试
+
+let canVote = age >= 18 ? "Yes":"No"
+
+let hour = 23
+print(hour < 12 ? "It's before noon" : "It's after noon") //有些情况必须使用三元运算符
