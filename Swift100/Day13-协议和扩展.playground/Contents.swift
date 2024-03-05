@@ -129,3 +129,152 @@ func getRandomBool() -> some Equatable {
     Bool.random()
 }
 
+/// 3、如何创建使用扩展
+
+/*
+ 扩展让我们可以向任何类型添加功能，无论是我们创建的还是其他人创建的，甚至是 Apple 自己的类型之一
+ */
+
+extension String {
+    func trimmed() -> String {
+        self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    mutating func trim() {//上面是返回一个字符串，这个是直接修改字符串本身
+        self = self.trimmed()
+    }
+    
+    var lines:[String] {
+        self.components(separatedBy: .newlines)
+    }
+}
+
+var quote = "   The truth is rarely pure and never simple   "
+
+let trimed = quote.trimmed()
+
+print(quote.trim())
+
+/*
+ ※ 您还可以使用扩展向类型添加属性，但有一个规则：它们只能是计算属性，而不是存储属性。原因是添加新的存储属性会影响数据类型的实际大小 - 如果我们向一个整数添加一堆存储属性，那么每个整数都需要占用更多的内存空间，这会导致各种排序的问题。
+ */
+
+let lyrics = """
+But I keep cruising
+Can't stop, won't stop moving
+It's like I got this music in my mind
+Saying it's gonna be alright
+"""
+print(lyrics.lines.count)
+
+struct Book {
+    let title: String
+    let pageCount: Int
+    let readingHours: Int
+    
+//    init(title: String, pageCount: Int) { 如果自定义了init 方法，系统就不会提供默认的初始化方法
+//        self.title = title
+//        self.pageCount = pageCount
+//        self.readingHours = pageCount / 50
+//    }
+}
+
+extension Book {// ※ 即又自定义的初始化方法，又保留了系统提供的初始化方法   如果您考虑一下，这是有道理的：如果在扩展中添加新的初始化程序也禁用了默认初始化程序，那么我们的一个小更改可能会破坏各种其他 Swift 代码。
+    init(title:String,pageCount: Int) {
+        self.title = title
+        self.pageCount = pageCount;
+        self.readingHours = pageCount / 50
+    }
+}
+
+
+/// 4、如何创建和使用协议扩展
+
+let guests = ["Mario", "Luigi", "Peach"]
+
+if guests.isEmpty == false {
+    print("Guest count: \(guests.count)")
+}
+
+extension Array { //只能用于Array
+    var isNotEmpty: Bool {
+        isEmpty == false
+    }
+}
+
+if guests.isNotEmpty {
+    print("Guest count: \(guests.count)")
+}
+
+extension Collection {//可以用于Array、Set和Dictionary
+    var isNotEmpty: Bool {
+        isEmpty == false
+    }
+}
+
+protocol Person {
+    var name:String {get}
+    func sayHello()
+}
+
+extension Person { // 符合类型可以不提供extension提供的方法
+    func sayHello() {
+        print("Hi, I'm \(name)")
+    }
+
+}
+
+struct Student: Person {
+    var name: String = "hello"
+    func sayHello() { // 如果自己提供了方法，调自己的，如果自己没有提供就调 extension 提供的
+        print("Hi, I'm student")
+
+    }
+}
+
+let student = Student();
+student.sayHello()
+
+
+/// 5、如何充分利用协议扩展
+
+//extension Int {
+//    func squared() -> Int {
+//        self * self
+//    }
+//}
+
+extension Numeric {
+    func squared() -> Self {
+        1
+    }
+}
+
+let wholeNumber = 5
+print(wholeNumber.squared())
+
+struct User: Equatable,Comparable {
+    let name: String
+ 
+}
+func <(lhs:User,rhs:User) -> Bool {
+    lhs.name < rhs.name
+}
+
+let user1 = User(name: "Link")
+let user2 = User(name: "Zelda")
+
+print(user1 == user2)
+print(user1 != user2)
+print(user1 < user2)
+print(user1 <= user2)
+print(user2 > user1)
+
+/// 6、协议和扩展总结
+
+/*
+ 1、协议就像代码契约：我们指定所需的函数和方法，并且一致的类型必须实现它们。
+ 2、不透明的返回类型让我们可以在代码中隐藏一些信息。这可能意味着我们希望保留未来更改的灵活性，但也意味着我们不需要编写巨大的返回类型。
+ 3、扩展让我们可以向自己的自定义类型或 Swift 的内置类型添加功能。这可能意味着添加一个方法，但我们也可以添加计算属性。
+ 4、协议扩展让我们可以一次性向多种类型添加功能——我们可以向协议添加属性和方法，并且所有符合要求的类型都可以访问它们。
+ */
