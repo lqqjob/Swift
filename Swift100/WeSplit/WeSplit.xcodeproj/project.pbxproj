@@ -11,11 +11,11 @@
 		70DBC68E2B976F8C003DFEAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC68D2B976F8C003DFEAC /* ContentView.swift */; };
 		70DBC6902B976F8F003DFEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC68F2B976F8F003DFEAC /* Assets.xcassets */; };
 		70DBC6932B976F8F003DFEAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC6922B976F8F003DFEAC /* Preview Assets.xcassets */; };
-		70DBC69A2B97721A003DFEAC /* CreatForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6992B97721A003DFEAC /* CreatForm.swift */; };
-		70DBC69C2B9772C1003DFEAC /* AddNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC69B2B9772C1003DFEAC /* AddNavigation.swift */; };
-		70DBC69E2B9773FB003DFEAC /* UpdateStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC69D2B9773FB003DFEAC /* UpdateStateView.swift */; };
-		70DBC6A02B977528003DFEAC /* BindingStateToUserInterfaceControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC69F2B977528003DFEAC /* BindingStateToUserInterfaceControls.swift */; };
-		70DBC6A22B9776AF003DFEAC /* CreatingViewsInALoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6A12B9776AF003DFEAC /* CreatingViewsInALoop.swift */; };
+		70DBC69A2B97721A003DFEAC /* 1_CreatForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6992B97721A003DFEAC /* 1_CreatForm.swift */; };
+		70DBC69C2B9772C1003DFEAC /* 2_AddNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC69B2B9772C1003DFEAC /* 2_AddNavigation.swift */; };
+		70DBC69E2B9773FB003DFEAC /* 3_UpdateStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC69D2B9773FB003DFEAC /* 3_UpdateStateView.swift */; };
+		70DBC6A02B977528003DFEAC /* 4_BindingStateToUserInterfaceControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC69F2B977528003DFEAC /* 4_BindingStateToUserInterfaceControls.swift */; };
+		70DBC6A22B9776AF003DFEAC /* 5_CreatingViewsInALoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6A12B9776AF003DFEAC /* 5_CreatingViewsInALoop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,11 +24,11 @@
 		70DBC68D2B976F8C003DFEAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70DBC68F2B976F8F003DFEAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70DBC6922B976F8F003DFEAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		70DBC6992B97721A003DFEAC /* CreatForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatForm.swift; sourceTree = "<group>"; };
-		70DBC69B2B9772C1003DFEAC /* AddNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNavigation.swift; sourceTree = "<group>"; };
-		70DBC69D2B9773FB003DFEAC /* UpdateStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStateView.swift; sourceTree = "<group>"; };
-		70DBC69F2B977528003DFEAC /* BindingStateToUserInterfaceControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingStateToUserInterfaceControls.swift; sourceTree = "<group>"; };
-		70DBC6A12B9776AF003DFEAC /* CreatingViewsInALoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingViewsInALoop.swift; sourceTree = "<group>"; };
+		70DBC6992B97721A003DFEAC /* 1_CreatForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_CreatForm.swift; sourceTree = "<group>"; };
+		70DBC69B2B9772C1003DFEAC /* 2_AddNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_AddNavigation.swift; sourceTree = "<group>"; };
+		70DBC69D2B9773FB003DFEAC /* 3_UpdateStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_UpdateStateView.swift; sourceTree = "<group>"; };
+		70DBC69F2B977528003DFEAC /* 4_BindingStateToUserInterfaceControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_BindingStateToUserInterfaceControls.swift; sourceTree = "<group>"; };
+		70DBC6A12B9776AF003DFEAC /* 5_CreatingViewsInALoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_CreatingViewsInALoop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,11 +65,11 @@
 				70DBC68D2B976F8C003DFEAC /* ContentView.swift */,
 				70DBC68F2B976F8F003DFEAC /* Assets.xcassets */,
 				70DBC6912B976F8F003DFEAC /* Preview Content */,
-				70DBC6992B97721A003DFEAC /* CreatForm.swift */,
-				70DBC69B2B9772C1003DFEAC /* AddNavigation.swift */,
-				70DBC69D2B9773FB003DFEAC /* UpdateStateView.swift */,
-				70DBC69F2B977528003DFEAC /* BindingStateToUserInterfaceControls.swift */,
-				70DBC6A12B9776AF003DFEAC /* CreatingViewsInALoop.swift */,
+				70DBC6992B97721A003DFEAC /* 1_CreatForm.swift */,
+				70DBC69B2B9772C1003DFEAC /* 2_AddNavigation.swift */,
+				70DBC69D2B9773FB003DFEAC /* 3_UpdateStateView.swift */,
+				70DBC69F2B977528003DFEAC /* 4_BindingStateToUserInterfaceControls.swift */,
+				70DBC6A12B9776AF003DFEAC /* 5_CreatingViewsInALoop.swift */,
 			);
 			path = WeSplit;
 			sourceTree = "<group>";
@@ -153,12 +153,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DBC68E2B976F8C003DFEAC /* ContentView.swift in Sources */,
-				70DBC6A02B977528003DFEAC /* BindingStateToUserInterfaceControls.swift in Sources */,
-				70DBC69A2B97721A003DFEAC /* CreatForm.swift in Sources */,
+				70DBC6A02B977528003DFEAC /* 4_BindingStateToUserInterfaceControls.swift in Sources */,
+				70DBC69A2B97721A003DFEAC /* 1_CreatForm.swift in Sources */,
 				70DBC68C2B976F8C003DFEAC /* WeSplitApp.swift in Sources */,
-				70DBC69E2B9773FB003DFEAC /* UpdateStateView.swift in Sources */,
-				70DBC69C2B9772C1003DFEAC /* AddNavigation.swift in Sources */,
-				70DBC6A22B9776AF003DFEAC /* CreatingViewsInALoop.swift in Sources */,
+				70DBC69E2B9773FB003DFEAC /* 3_UpdateStateView.swift in Sources */,
+				70DBC69C2B9772C1003DFEAC /* 2_AddNavigation.swift in Sources */,
+				70DBC6A22B9776AF003DFEAC /* 5_CreatingViewsInALoop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
