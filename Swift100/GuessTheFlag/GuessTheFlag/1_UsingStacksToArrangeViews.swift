@@ -39,6 +39,32 @@ struct UsingStacksToArrangeViews: View {
                 Text("This is inside a stack")
             }
         }
+        
+        Section {
+            VStack {
+                Text("First")
+                Text("First")
+                Text("First")
+                Spacer()//会将所有视图推到屏幕顶部
+            }
+        }
+        
+        Section {
+            VStack {
+                Spacer()//顶部三分之一
+                Text("First")
+                Text("First")
+                Text("First")
+                Spacer()
+                Spacer()//底部三分之二
+                
+            }
+        }
+        
+        ZStack(alignment:.top) {
+            Text("Hello, world!")
+            Text("This is inside a stack")
+        }
     }
 }
 
