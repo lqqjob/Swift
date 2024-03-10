@@ -15,6 +15,11 @@ struct StackingUpButtons: View {
     
     @State private var showingScore = false
     @State private var scoreTitle = ""
+    @State private var score = 0
+    @State private var message = ""
+    
+    @State private var showGameOver = false
+    @State private var playCount = 0;
     
     var body: some View {
         ZStack {
@@ -55,7 +60,7 @@ struct StackingUpButtons: View {
                 .clipShape(.rect(cornerRadius: 20))
               
                 
-                Text("Score: ???")
+                Text("Score: \(score)")
                     .foregroundStyle(.white)
                     .font(.title.bold())
                 
@@ -66,18 +71,34 @@ struct StackingUpButtons: View {
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue",action: askQuestion)
         } message: {
-            Text("Your score is ???")
+            Text(message)
+        }
+        .alert("Game Over", isPresented:$showGameOver) {
+            Button("Restat") {
+                score = 0
+                askQuestion()
+                playCount = 0;
+            }
+        } message: {
+            Text("Your total score is \(score)")
         }
     }
     
     func flagTapped(_ number:Int) {
         if number == correctAnswer {
             scoreTitle = "Correct"
+            score += 1
+            message = "Your score is \(score)"
         }else {
             scoreTitle = "Wrong"
+            message = "Wrong! That’s the flag of \(countries[number])"
         }
         
         showingScore = true
+        playCount += 1
+        if playCount >= 8 {
+            showGameOver = true
+        }
     }
     
     func askQuestion() {
