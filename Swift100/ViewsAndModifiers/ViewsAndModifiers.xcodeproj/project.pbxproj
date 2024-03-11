@@ -15,6 +15,13 @@
 		70DBC6CC2B9E05B7003DFEAC /* 1_ViewsAndModifiersIntroduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6CB2B9E05B7003DFEAC /* 1_ViewsAndModifiersIntroduction.swift */; };
 		70DBC6CE2B9E0609003DFEAC /* 2_WhyDoesSwiftUIUseStructsForViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6CD2B9E0609003DFEAC /* 2_WhyDoesSwiftUIUseStructsForViews.swift */; };
 		70DBC6D02B9E0639003DFEAC /* 3_WhatIsBehindTheMainSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6CF2B9E0639003DFEAC /* 3_WhatIsBehindTheMainSwiftUIView.swift */; };
+		D59D7EAB2B9EFFF7004DBD6E /* 5_WhyDoesSwiftUIUseSomeViewForItsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EAA2B9EFFF7004DBD6E /* 5_WhyDoesSwiftUIUseSomeViewForItsViewType.swift */; };
+		D59D7EAD2B9F01D2004DBD6E /* 6_ConditionalModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EAC2B9F01D2004DBD6E /* 6_ConditionalModifiers.swift */; };
+		D59D7EAF2B9F02A8004DBD6E /* 7_EnvironmentModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EAE2B9F02A8004DBD6E /* 7_EnvironmentModifiers.swift */; };
+		D59D7EB12B9F0469004DBD6E /* 8_ViewsAsProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EB02B9F0469004DBD6E /* 8_ViewsAsProperties.swift */; };
+		D59D7EB32B9F06AE004DBD6E /* 9_ViewComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EB22B9F06AE004DBD6E /* 9_ViewComposition.swift */; };
+		D59D7EB52B9F088A004DBD6E /* 10_CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EB42B9F088A004DBD6E /* 10_CustomModifiers.swift */; };
+		D59D7EB72B9F0FED004DBD6E /* 11_CustomContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EB62B9F0FED004DBD6E /* 11_CustomContainers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,13 @@
 		70DBC6CB2B9E05B7003DFEAC /* 1_ViewsAndModifiersIntroduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_ViewsAndModifiersIntroduction.swift; sourceTree = "<group>"; };
 		70DBC6CD2B9E0609003DFEAC /* 2_WhyDoesSwiftUIUseStructsForViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_WhyDoesSwiftUIUseStructsForViews.swift; sourceTree = "<group>"; };
 		70DBC6CF2B9E0639003DFEAC /* 3_WhatIsBehindTheMainSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_WhatIsBehindTheMainSwiftUIView.swift; sourceTree = "<group>"; };
+		D59D7EAA2B9EFFF7004DBD6E /* 5_WhyDoesSwiftUIUseSomeViewForItsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_WhyDoesSwiftUIUseSomeViewForItsViewType.swift; sourceTree = "<group>"; };
+		D59D7EAC2B9F01D2004DBD6E /* 6_ConditionalModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_ConditionalModifiers.swift; sourceTree = "<group>"; };
+		D59D7EAE2B9F02A8004DBD6E /* 7_EnvironmentModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_EnvironmentModifiers.swift; sourceTree = "<group>"; };
+		D59D7EB02B9F0469004DBD6E /* 8_ViewsAsProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ViewsAsProperties.swift; sourceTree = "<group>"; };
+		D59D7EB22B9F06AE004DBD6E /* 9_ViewComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_ViewComposition.swift; sourceTree = "<group>"; };
+		D59D7EB42B9F088A004DBD6E /* 10_CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10_CustomModifiers.swift; sourceTree = "<group>"; };
+		D59D7EB62B9F0FED004DBD6E /* 11_CustomContainers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11_CustomContainers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +81,13 @@
 				70DBC6CD2B9E0609003DFEAC /* 2_WhyDoesSwiftUIUseStructsForViews.swift */,
 				70DBC6CF2B9E0639003DFEAC /* 3_WhatIsBehindTheMainSwiftUIView.swift */,
 				70DBC6C92B9E057D003DFEAC /* 4_WhyModifierOrderMatters.swift */,
+				D59D7EAA2B9EFFF7004DBD6E /* 5_WhyDoesSwiftUIUseSomeViewForItsViewType.swift */,
+				D59D7EAC2B9F01D2004DBD6E /* 6_ConditionalModifiers.swift */,
+				D59D7EAE2B9F02A8004DBD6E /* 7_EnvironmentModifiers.swift */,
+				D59D7EB02B9F0469004DBD6E /* 8_ViewsAsProperties.swift */,
+				D59D7EB22B9F06AE004DBD6E /* 9_ViewComposition.swift */,
+				D59D7EB42B9F088A004DBD6E /* 10_CustomModifiers.swift */,
+				D59D7EB62B9F0FED004DBD6E /* 11_CustomContainers.swift */,
 			);
 			path = ViewsAndModifiers;
 			sourceTree = "<group>";
@@ -149,10 +170,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D59D7EAF2B9F02A8004DBD6E /* 7_EnvironmentModifiers.swift in Sources */,
+				D59D7EB32B9F06AE004DBD6E /* 9_ViewComposition.swift in Sources */,
+				D59D7EAB2B9EFFF7004DBD6E /* 5_WhyDoesSwiftUIUseSomeViewForItsViewType.swift in Sources */,
 				70DBC6CE2B9E0609003DFEAC /* 2_WhyDoesSwiftUIUseStructsForViews.swift in Sources */,
 				70DBC6BE2B9E0215003DFEAC /* ContentView.swift in Sources */,
+				D59D7EB72B9F0FED004DBD6E /* 11_CustomContainers.swift in Sources */,
+				D59D7EAD2B9F01D2004DBD6E /* 6_ConditionalModifiers.swift in Sources */,
+				D59D7EB12B9F0469004DBD6E /* 8_ViewsAsProperties.swift in Sources */,
 				70DBC6BC2B9E0215003DFEAC /* ViewsAndModifiersApp.swift in Sources */,
 				70DBC6D02B9E0639003DFEAC /* 3_WhatIsBehindTheMainSwiftUIView.swift in Sources */,
+				D59D7EB52B9F088A004DBD6E /* 10_CustomModifiers.swift in Sources */,
 				70DBC6CA2B9E057D003DFEAC /* 4_WhyModifierOrderMatters.swift in Sources */,
 				70DBC6CC2B9E05B7003DFEAC /* 1_ViewsAndModifiersIntroduction.swift in Sources */,
 			);
