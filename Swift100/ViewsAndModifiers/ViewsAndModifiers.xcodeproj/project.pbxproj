@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70399CB42BA0A0A70026F49C /* 12_Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70399CB32BA0A0A70026F49C /* 12_Challenge.swift */; };
 		70DBC6BC2B9E0215003DFEAC /* ViewsAndModifiersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6BB2B9E0215003DFEAC /* ViewsAndModifiersApp.swift */; };
 		70DBC6BE2B9E0215003DFEAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBC6BD2B9E0215003DFEAC /* ContentView.swift */; };
 		70DBC6C02B9E0217003DFEAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70DBC6BF2B9E0217003DFEAC /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70399CB32BA0A0A70026F49C /* 12_Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12_Challenge.swift; sourceTree = "<group>"; };
 		70DBC6B82B9E0215003DFEAC /* ViewsAndModifiers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewsAndModifiers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DBC6BB2B9E0215003DFEAC /* ViewsAndModifiersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsAndModifiersApp.swift; sourceTree = "<group>"; };
 		70DBC6BD2B9E0215003DFEAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				D59D7EB22B9F06AE004DBD6E /* 9_ViewComposition.swift */,
 				D59D7EB42B9F088A004DBD6E /* 10_CustomModifiers.swift */,
 				D59D7EB62B9F0FED004DBD6E /* 11_CustomContainers.swift */,
+				70399CB32BA0A0A70026F49C /* 12_Challenge.swift */,
 			);
 			path = ViewsAndModifiers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				70DBC6BE2B9E0215003DFEAC /* ContentView.swift in Sources */,
 				D59D7EB72B9F0FED004DBD6E /* 11_CustomContainers.swift in Sources */,
 				D59D7EAD2B9F01D2004DBD6E /* 6_ConditionalModifiers.swift in Sources */,
+				70399CB42BA0A0A70026F49C /* 12_Challenge.swift in Sources */,
 				D59D7EB12B9F0469004DBD6E /* 8_ViewsAsProperties.swift in Sources */,
 				70DBC6BC2B9E0215003DFEAC /* ViewsAndModifiersApp.swift in Sources */,
 				70DBC6D02B9E0639003DFEAC /* 3_WhatIsBehindTheMainSwiftUIView.swift in Sources */,
