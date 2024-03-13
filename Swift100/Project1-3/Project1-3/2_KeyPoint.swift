@@ -51,7 +51,6 @@ struct KeyPoint: View {
             }
         }
         
-        
         /// 3、处理绑定
         
         let binding = Binding(
@@ -82,7 +81,6 @@ struct KeyPoint: View {
             Toggle("email",isOn: $agreedToEmails)
             Toggle("all",isOn: agreedToAll)
         }
-        
         
     }
 }
