@@ -14,6 +14,7 @@
 		D59D7ED32BA1AD84004DBD6E /* 1_EnteringNumbersWithStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7ED22BA1AD84004DBD6E /* 1_EnteringNumbersWithStepper.swift */; };
 		D59D7ED52BA1AE87004DBD6E /* 2_SelectingDatesAndTimesWithDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7ED42BA1AE87004DBD6E /* 2_SelectingDatesAndTimesWithDatePicker.swift */; };
 		D59D7ED72BA1B180004DBD6E /* 3_WorkingWithDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7ED62BA1B180004DBD6E /* 3_WorkingWithDates.swift */; };
+		D59D7EDB2BA29E3B004DBD6E /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EDA2BA29E3B004DBD6E /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		D59D7ED22BA1AD84004DBD6E /* 1_EnteringNumbersWithStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_EnteringNumbersWithStepper.swift; sourceTree = "<group>"; };
 		D59D7ED42BA1AE87004DBD6E /* 2_SelectingDatesAndTimesWithDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_SelectingDatesAndTimesWithDatePicker.swift; sourceTree = "<group>"; };
 		D59D7ED62BA1B180004DBD6E /* 3_WorkingWithDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_WorkingWithDates.swift; sourceTree = "<group>"; };
+		D59D7EDA2BA29E3B004DBD6E /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		D59D7EC32BA1AD0F004DBD6E /* BetterRest */ = {
 			isa = PBXGroup;
 			children = (
+				D59D7EDA2BA29E3B004DBD6E /* SleepCalculator.mlmodel */,
 				D59D7EC42BA1AD0F004DBD6E /* BetterRestApp.swift */,
 				D59D7EC62BA1AD0F004DBD6E /* ContentView.swift */,
 				D59D7EC82BA1AD10004DBD6E /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 				D59D7ED32BA1AD84004DBD6E /* 1_EnteringNumbersWithStepper.swift in Sources */,
 				D59D7ED52BA1AE87004DBD6E /* 2_SelectingDatesAndTimesWithDatePicker.swift in Sources */,
 				D59D7EC72BA1AD0F004DBD6E /* ContentView.swift in Sources */,
+				D59D7EDB2BA29E3B004DBD6E /* SleepCalculator.mlmodel in Sources */,
 				D59D7EC52BA1AD0F004DBD6E /* BetterRestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
