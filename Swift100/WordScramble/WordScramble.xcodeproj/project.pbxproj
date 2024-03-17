@@ -14,6 +14,7 @@
 		70399CEE2BA5E8BD0026F49C /* IntroducingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70399CED2BA5E8BD0026F49C /* IntroducingList.swift */; };
 		70399CF02BA5EEFC0026F49C /* LoadingResourcesFromYourAppBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70399CEF2BA5EEFC0026F49C /* LoadingResourcesFromYourAppBundle.swift */; };
 		70399CF22BA5F1D60026F49C /* WorkingWithStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70399CF12BA5F1D60026F49C /* WorkingWithStrings.swift */; };
+		70399CF42BA73B3D0026F49C /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 70399CF32BA73B3D0026F49C /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		70399CED2BA5E8BD0026F49C /* IntroducingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroducingList.swift; sourceTree = "<group>"; };
 		70399CEF2BA5EEFC0026F49C /* LoadingResourcesFromYourAppBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingResourcesFromYourAppBundle.swift; sourceTree = "<group>"; };
 		70399CF12BA5F1D60026F49C /* WorkingWithStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingWithStrings.swift; sourceTree = "<group>"; };
+		70399CF32BA73B3D0026F49C /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		70399CDE2BA5E8370026F49C /* WordScramble */ = {
 			isa = PBXGroup;
 			children = (
+				70399CF32BA73B3D0026F49C /* start.txt */,
 				70399CDF2BA5E8370026F49C /* WordScrambleApp.swift */,
 				70399CE12BA5E8370026F49C /* ContentView.swift */,
 				70399CE32BA5E8390026F49C /* Assets.xcassets */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70399CE72BA5E8390026F49C /* Preview Assets.xcassets in Resources */,
+				70399CF42BA73B3D0026F49C /* start.txt in Resources */,
 				70399CE42BA5E8390026F49C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
