@@ -29,6 +29,9 @@ struct ContentView: View {
      
      @State private var showGameOver = false
      @State private var playCount = 0;
+    
+    @State private var animationAmount = 0.0
+    @State private var clickIndex = -1;
      
      var body: some View {
          ZStack {
@@ -54,11 +57,23 @@ struct ContentView: View {
                       
                       ForEach(0..<3) {number in
                           Button {
+                              clickIndex = number
                               flagTapped(number)
+                              withAnimation {
+                                  animationAmount -= 360
+                              }
                           } label: {
                              FlagImage(imageName: countries[number])
 
                           }
+                          
+                          .opacity(clickIndex == number ? 1 : 0.25)
+                          .scaleEffect(clickIndex == number ? 1 : 0.8)
+                          .animation(.default,value: clickIndex)
+                          .rotation3DEffect(
+                            .degrees(clickIndex == number ? animationAmount : 0),
+                                                  axis: (x: 0.0, y: 1.0, z: 0.0)
+                          )
                       }
                   }
                  .frame(maxWidth:.infinity)
@@ -85,6 +100,7 @@ struct ContentView: View {
                  score = 0
                  askQuestion()
                  playCount = 0;
+                 clickIndex = -1
              }
          } message: {
              Text("Your total score is \(score)")
@@ -109,8 +125,12 @@ struct ContentView: View {
      }
      
      func askQuestion() {
-         countries.shuffle()
-         correctAnswer = Int.random(in: 0...2)
+         clickIndex = -1
+         withAnimation {
+             countries.shuffle()
+             correctAnswer = Int.random(in: 0...2)
+         }
+         
      }
  }
 

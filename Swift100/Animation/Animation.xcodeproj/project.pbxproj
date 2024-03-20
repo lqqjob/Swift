@@ -15,6 +15,10 @@
 		D59D7EFB2BA7E327004DBD6E /* 2_CustomizingAnimationsInSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EFA2BA7E327004DBD6E /* 2_CustomizingAnimationsInSwiftUI.swift */; };
 		D59D7EFD2BA7F381004DBD6E /* 3_AnimatingBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EFC2BA7F381004DBD6E /* 3_AnimatingBindings.swift */; };
 		D59D7EFF2BA82195004DBD6E /* 4_CreatingExplicitAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7EFE2BA82195004DBD6E /* 4_CreatingExplicitAnimations.swift */; };
+		D59D7F012BA92F0B004DBD6E /* 5_ControllingTheAnimationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7F002BA92F0B004DBD6E /* 5_ControllingTheAnimationStack.swift */; };
+		D59D7F032BA932B1004DBD6E /* 6_AnimatingGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59D7F022BA932B1004DBD6E /* 6_AnimatingGestures.swift */; };
+		D5F76FAC2BAAB70A0092C05B /* 7_ShowingAndHidingViewsWithTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F76FAB2BAAB70A0092C05B /* 7_ShowingAndHidingViewsWithTransitions.swift */; };
+		D5F76FAE2BAABA4B0092C05B /* 8_BuildingCustomTransitionsUsingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F76FAD2BAABA4B0092C05B /* 8_BuildingCustomTransitionsUsingViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		D59D7EFA2BA7E327004DBD6E /* 2_CustomizingAnimationsInSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_CustomizingAnimationsInSwiftUI.swift; sourceTree = "<group>"; };
 		D59D7EFC2BA7F381004DBD6E /* 3_AnimatingBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_AnimatingBindings.swift; sourceTree = "<group>"; };
 		D59D7EFE2BA82195004DBD6E /* 4_CreatingExplicitAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_CreatingExplicitAnimations.swift; sourceTree = "<group>"; };
+		D59D7F002BA92F0B004DBD6E /* 5_ControllingTheAnimationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_ControllingTheAnimationStack.swift; sourceTree = "<group>"; };
+		D59D7F022BA932B1004DBD6E /* 6_AnimatingGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_AnimatingGestures.swift; sourceTree = "<group>"; };
+		D5F76FAB2BAAB70A0092C05B /* 7_ShowingAndHidingViewsWithTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_ShowingAndHidingViewsWithTransitions.swift; sourceTree = "<group>"; };
+		D5F76FAD2BAABA4B0092C05B /* 8_BuildingCustomTransitionsUsingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_BuildingCustomTransitionsUsingViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,10 @@
 				D59D7EFA2BA7E327004DBD6E /* 2_CustomizingAnimationsInSwiftUI.swift */,
 				D59D7EFC2BA7F381004DBD6E /* 3_AnimatingBindings.swift */,
 				D59D7EFE2BA82195004DBD6E /* 4_CreatingExplicitAnimations.swift */,
+				D59D7F002BA92F0B004DBD6E /* 5_ControllingTheAnimationStack.swift */,
+				D59D7F022BA932B1004DBD6E /* 6_AnimatingGestures.swift */,
+				D5F76FAB2BAAB70A0092C05B /* 7_ShowingAndHidingViewsWithTransitions.swift */,
+				D5F76FAD2BAABA4B0092C05B /* 8_BuildingCustomTransitionsUsingViewModifier.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -149,12 +161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F76FAE2BAABA4B0092C05B /* 8_BuildingCustomTransitionsUsingViewModifier.swift in Sources */,
+				D59D7F012BA92F0B004DBD6E /* 5_ControllingTheAnimationStack.swift in Sources */,
 				D59D7EFF2BA82195004DBD6E /* 4_CreatingExplicitAnimations.swift in Sources */,
 				D59D7EFB2BA7E327004DBD6E /* 2_CustomizingAnimationsInSwiftUI.swift in Sources */,
 				D59D7EED2BA7E0E2004DBD6E /* ContentView.swift in Sources */,
+				D59D7F032BA932B1004DBD6E /* 6_AnimatingGestures.swift in Sources */,
 				D59D7EF92BA7E13A004DBD6E /* 1_CreatingImplicitAnimations.swift in Sources */,
 				D59D7EEB2BA7E0E2004DBD6E /* AnimationApp.swift in Sources */,
 				D59D7EFD2BA7F381004DBD6E /* 3_AnimatingBindings.swift in Sources */,
+				D5F76FAC2BAAB70A0092C05B /* 7_ShowingAndHidingViewsWithTransitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
