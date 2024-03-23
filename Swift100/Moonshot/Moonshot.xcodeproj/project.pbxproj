@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70FA04BC2BAF251D008C8208 /* 3_PushingViewsUsingNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA04BB2BAF251D008C8208 /* 3_PushingViewsUsingNavigationLink.swift */; };
+		70FA04BE2BAF282F008C8208 /* 4_ HerarchicalCodableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA04BD2BAF282F008C8208 /* 4_ HerarchicalCodableData.swift */; };
+		70FA04C02BAF2A9A008C8208 /* 5_ScrollingGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA04BF2BAF2A9A008C8208 /* 5_ScrollingGrid.swift */; };
 		D5F76FE02BAD67F60092C05B /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F76FDF2BAD67F60092C05B /* MoonshotApp.swift */; };
 		D5F76FE22BAD67F60092C05B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F76FE12BAD67F60092C05B /* ContentView.swift */; };
 		D5F76FE42BAD67F80092C05B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F76FE32BAD67F80092C05B /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70FA04BB2BAF251D008C8208 /* 3_PushingViewsUsingNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_PushingViewsUsingNavigationLink.swift; sourceTree = "<group>"; };
+		70FA04BD2BAF282F008C8208 /* 4_ HerarchicalCodableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4_ HerarchicalCodableData.swift"; sourceTree = "<group>"; };
+		70FA04BF2BAF2A9A008C8208 /* 5_ScrollingGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_ScrollingGrid.swift; sourceTree = "<group>"; };
 		D5F76FDC2BAD67F60092C05B /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F76FDF2BAD67F60092C05B /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		D5F76FE12BAD67F60092C05B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +73,9 @@
 				D5F76FE52BAD67F80092C05B /* Preview Content */,
 				D5F770A22BAD73A50092C05B /* 1_ResizingImagesToFitTheAvailableSpace.swift */,
 				D5F770A42BAD88340092C05B /* 2_ScrollViewWork.swift */,
+				70FA04BB2BAF251D008C8208 /* 3_PushingViewsUsingNavigationLink.swift */,
+				70FA04BD2BAF282F008C8208 /* 4_ HerarchicalCodableData.swift */,
+				70FA04BF2BAF2A9A008C8208 /* 5_ScrollingGrid.swift */,
 			);
 			path = Moonshot;
 			sourceTree = "<group>";
@@ -154,7 +163,10 @@
 				D5F770A52BAD88340092C05B /* 2_ScrollViewWork.swift in Sources */,
 				D5F76FE22BAD67F60092C05B /* ContentView.swift in Sources */,
 				D5F770A32BAD73A50092C05B /* 1_ResizingImagesToFitTheAvailableSpace.swift in Sources */,
+				70FA04BE2BAF282F008C8208 /* 4_ HerarchicalCodableData.swift in Sources */,
+				70FA04BC2BAF251D008C8208 /* 3_PushingViewsUsingNavigationLink.swift in Sources */,
 				D5F76FE02BAD67F60092C05B /* MoonshotApp.swift in Sources */,
+				70FA04C02BAF2A9A008C8208 /* 5_ScrollingGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
