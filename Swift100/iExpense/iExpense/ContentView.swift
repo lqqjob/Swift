@@ -59,10 +59,14 @@ struct ContentView: View {
                 .onDelete(perform: removeItem)
             }
             .navigationTitle("iExpense")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                Button("Add Expense",systemImage: "plus") {
-
-                    showingAddExpense.toggle()
+//                Button("Add Expense",systemImage: "plus") {
+//
+//                    showingAddExpense.toggle()
+//                }
+                NavigationLink("Add Expense") {
+                       AddView(expenses: expenses)
                 }
             }
         }
@@ -78,7 +82,7 @@ struct ContentView: View {
 
 
 struct AddView : View {
-    @State private var name = ""
+    @State private var name = "Name"
     @State private var type = "Personal"
     @State private var amount = 0.0
     var expenses:Expenses
@@ -87,7 +91,7 @@ struct AddView : View {
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Name",text: $name)
+//                TextField("Name",text: $name)
                 Picker("Type",selection: $type) {
                     ForEach(types,id: \.self)  {
                         Text($0)
@@ -97,18 +101,27 @@ struct AddView : View {
                 TextField("Amount",value: $amount,format: .currency(code: "USD"))
                     .keyboardType(.decimalPad)
             }
-            .navigationTitle("Add new expense")
+            .navigationTitle($name)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
             .toolbar {
-                Button("Save") {
-                    let expense = ExpenseItem(name: name, type: type, amount: amount)
-                    expenses.items.append(expense)
-                    expenses.items.sort {
-                        if $0.type == $1.type  {
-                          return  $0.amount > $1.amount
-                        }
-                        return  $0.type > $1.type
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Cancel") {
+                        dismiss()
                     }
-                    dismiss()
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Save") {
+                        let expense = ExpenseItem(name: name, type: type, amount: amount)
+                        expenses.items.append(expense)
+                        expenses.items.sort {
+                            if $0.type == $1.type  {
+                              return  $0.amount > $1.amount
+                            }
+                            return  $0.type > $1.type
+                        }
+                        dismiss()
+                    }
                 }
                 
             }

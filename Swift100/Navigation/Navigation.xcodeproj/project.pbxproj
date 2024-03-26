@@ -17,6 +17,9 @@
 		D5F770BA2BB11A2B0092C05B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F770B92BB11A2B0092C05B /* Preview Assets.xcassets */; };
 		D5F770C12BB11A9A0092C05B /* 1_ProblemWithNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F770C02BB11A9A0092C05B /* 1_ProblemWithNavigationLink.swift */; };
 		D5F770C32BB11CC00092C05B /* 2_HandlingNavigationNavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F770C22BB11CC00092C05B /* 2_HandlingNavigationNavigationDestination.swift */; };
+		D5F770C52BB2635F0092C05B /* 7_CustomizingTheNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F770C42BB2635F0092C05B /* 7_CustomizingTheNavigation.swift */; };
+		D5F770C72BB266E30092C05B /* 8_PlacingToolbarButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F770C62BB266E30092C05B /* 8_PlacingToolbarButtons.swift */; };
+		D5F770C92BB26CA20092C05B /* 9_NavigationTitleEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F770C82BB26CA20092C05B /* 9_NavigationTitleEditable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		D5F770B92BB11A2B0092C05B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5F770C02BB11A9A0092C05B /* 1_ProblemWithNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_ProblemWithNavigationLink.swift; sourceTree = "<group>"; };
 		D5F770C22BB11CC00092C05B /* 2_HandlingNavigationNavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_HandlingNavigationNavigationDestination.swift; sourceTree = "<group>"; };
+		D5F770C42BB2635F0092C05B /* 7_CustomizingTheNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_CustomizingTheNavigation.swift; sourceTree = "<group>"; };
+		D5F770C62BB266E30092C05B /* 8_PlacingToolbarButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_PlacingToolbarButtons.swift; sourceTree = "<group>"; };
+		D5F770C82BB26CA20092C05B /* 9_NavigationTitleEditable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_NavigationTitleEditable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 				70FA04CF2BB1C7B8008C8208 /* 4_UsingNavigationPath.swift */,
 				70FA04D12BB1CAAD008C8208 /* 5_NavigationStackReturnToRootView.swift */,
 				70FA04D32BB1CFBD008C8208 /* 6_SaveNavigationStackPathsUsingCodable.swift */,
+				D5F770C42BB2635F0092C05B /* 7_CustomizingTheNavigation.swift */,
+				D5F770C62BB266E30092C05B /* 8_PlacingToolbarButtons.swift */,
+				D5F770C82BB26CA20092C05B /* 9_NavigationTitleEditable.swift */,
 				D5F770B62BB11A2B0092C05B /* Assets.xcassets */,
 				D5F770B82BB11A2B0092C05B /* Preview Content */,
 			);
@@ -157,9 +166,12 @@
 			files = (
 				D5F770C12BB11A9A0092C05B /* 1_ProblemWithNavigationLink.swift in Sources */,
 				70FA04CE2BB1C5E1008C8208 /* 3_NavigationWithNavigationStack.swift in Sources */,
+				D5F770C92BB26CA20092C05B /* 9_NavigationTitleEditable.swift in Sources */,
+				D5F770C72BB266E30092C05B /* 8_PlacingToolbarButtons.swift in Sources */,
 				70FA04D42BB1CFBD008C8208 /* 6_SaveNavigationStackPathsUsingCodable.swift in Sources */,
 				D5F770B52BB11A290092C05B /* ContentView.swift in Sources */,
 				D5F770B32BB11A290092C05B /* NavigationApp.swift in Sources */,
+				D5F770C52BB2635F0092C05B /* 7_CustomizingTheNavigation.swift in Sources */,
 				D5F770C32BB11CC00092C05B /* 2_HandlingNavigationNavigationDestination.swift in Sources */,
 				70FA04D02BB1C7B8008C8208 /* 4_UsingNavigationPath.swift in Sources */,
 				70FA04D22BB1CAAD008C8208 /* 5_NavigationStackReturnToRootView.swift in Sources */,
