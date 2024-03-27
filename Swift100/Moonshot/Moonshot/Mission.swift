@@ -8,8 +8,8 @@
 import Foundation
 
 
-struct Mission:Codable,Identifiable {
-    struct CrewRole:Codable {//嵌套结构，只是放置在另一个结构内部的一个结构 它有助于保持代码井然有序：而不是说CrewRole，而是写Mission.CrewRole
+struct Mission:Codable,Identifiable,Hashable {
+    struct CrewRole:Codable,Hashable {//嵌套结构，只是放置在另一个结构内部的一个结构 它有助于保持代码井然有序：而不是说CrewRole，而是写Mission.CrewRole
         let name:String
         let role:String
     }

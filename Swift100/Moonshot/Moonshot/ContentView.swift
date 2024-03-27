@@ -17,9 +17,7 @@ struct ContentView: View {
             ScrollView{
                 LazyVGrid(columns:culums) {
                     ForEach(missions) {misson in
-                        NavigationLink {
-                            MissionView(mission: misson, astronauts: astronauts)
-                        } label : {
+                        NavigationLink(value: misson) {
                             VStack {
                                 Image(misson.image)
                                     .resizable()
@@ -43,13 +41,44 @@ struct ContentView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(.lightBackground)
                             )
-                            
-                            
                         }
+//                        NavigationLink {
+//                            MissionView(mission: misson, astronauts: astronauts)
+//                        } label : {
+//                            VStack {
+//                                Image(misson.image)
+//                                    .resizable()
+//                                    .scaledToFit()
+//                                    .frame(width: 100,height: 100)
+//                                    .padding()
+//                                VStack {
+//                                    Text(misson.displayName)
+//                                        .font(.headline)
+//                                        .foregroundStyle(.white)
+//                                    Text(misson.formattedLaunchDate)
+//                                        .font(.caption)
+//                                        .foregroundStyle(.white.opacity(0.5))
+//                                }
+//                                .padding(.vertical)
+//                                .frame(maxWidth:.infinity)
+//                                .background(.lightBackground)
+//                            }
+//                            .clipShape(.rect(cornerRadius: 10))
+//                            .overlay(
+//                                RoundedRectangle(cornerRadius: 10)
+//                                    .stroke(.lightBackground)
+//                            )
+//                            
+//                            
+//                        }
                         
                     }
                 }
                 .padding([.horizontal,.bottom])
+                .navigationDestination(for: Mission.self) { select in
+                    MissionView(mission: select, astronauts: astronauts)
+
+                }
             }
             .navigationTitle("Moonshot")
             .background(.darkBackground)
