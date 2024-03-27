@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70FA04D62BB45F10008C8208 /* 2_LoadingImageFromServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA04D52BB45F10008C8208 /* 2_LoadingImageFromServer.swift */; };
+		70FA04D82BB46B31008C8208 /* 3_DisablingForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FA04D72BB46B31008C8208 /* 3_DisablingForms.swift */; };
 		D53994282BB3C8B10087803C /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53994272BB3C8B10087803C /* CupcakeCornerApp.swift */; };
 		D539942A2BB3C8B10087803C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53994292BB3C8B10087803C /* ContentView.swift */; };
 		D539942C2BB3C8B30087803C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D539942B2BB3C8B30087803C /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70FA04D52BB45F10008C8208 /* 2_LoadingImageFromServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_LoadingImageFromServer.swift; sourceTree = "<group>"; };
+		70FA04D72BB46B31008C8208 /* 3_DisablingForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_DisablingForms.swift; sourceTree = "<group>"; };
 		D53994242BB3C8B10087803C /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53994272BB3C8B10087803C /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
 		D53994292BB3C8B10087803C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 				D53994272BB3C8B10087803C /* CupcakeCornerApp.swift */,
 				D53994292BB3C8B10087803C /* ContentView.swift */,
 				D53994352BB3CDE90087803C /* 1_SendingAndReceivingDataWithURLSession.swift */,
+				70FA04D52BB45F10008C8208 /* 2_LoadingImageFromServer.swift */,
+				70FA04D72BB46B31008C8208 /* 3_DisablingForms.swift */,
 				D539942B2BB3C8B30087803C /* Assets.xcassets */,
 				D539942D2BB3C8B30087803C /* Preview Content */,
 			);
@@ -143,6 +149,8 @@
 				D539942A2BB3C8B10087803C /* ContentView.swift in Sources */,
 				D53994282BB3C8B10087803C /* CupcakeCornerApp.swift in Sources */,
 				D53994362BB3CDE90087803C /* 1_SendingAndReceivingDataWithURLSession.swift in Sources */,
+				70FA04D82BB46B31008C8208 /* 3_DisablingForms.swift in Sources */,
+				70FA04D62BB45F10008C8208 /* 2_LoadingImageFromServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
