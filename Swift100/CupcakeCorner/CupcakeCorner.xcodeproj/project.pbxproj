@@ -14,6 +14,11 @@
 		D539942C2BB3C8B30087803C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D539942B2BB3C8B30087803C /* Assets.xcassets */; };
 		D539942F2BB3C8B30087803C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D539942E2BB3C8B30087803C /* Preview Assets.xcassets */; };
 		D53994362BB3CDE90087803C /* 1_SendingAndReceivingDataWithURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53994352BB3CDE90087803C /* 1_SendingAndReceivingDataWithURLSession.swift */; };
+		D53994382BB50B990087803C /* 5_AddingHapticEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53994372BB50B990087803C /* 5_AddingHapticEffects.swift */; };
+		D539943A2BB510160087803C /* 4_AddCodableObservableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53994392BB510160087803C /* 4_AddCodableObservableClass.swift */; };
+		D539943C2BB515770087803C /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539943B2BB515770087803C /* Order.swift */; };
+		D539943E2BB540440087803C /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539943D2BB540440087803C /* AddressView.swift */; };
+		D53994402BB541600087803C /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539943F2BB541600087803C /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		D539942B2BB3C8B30087803C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D539942E2BB3C8B30087803C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D53994352BB3CDE90087803C /* 1_SendingAndReceivingDataWithURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_SendingAndReceivingDataWithURLSession.swift; sourceTree = "<group>"; };
+		D53994372BB50B990087803C /* 5_AddingHapticEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_AddingHapticEffects.swift; sourceTree = "<group>"; };
+		D53994392BB510160087803C /* 4_AddCodableObservableClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_AddCodableObservableClass.swift; sourceTree = "<group>"; };
+		D539943B2BB515770087803C /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		D539943D2BB540440087803C /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		D539943F2BB541600087803C /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +69,14 @@
 			children = (
 				D53994272BB3C8B10087803C /* CupcakeCornerApp.swift */,
 				D53994292BB3C8B10087803C /* ContentView.swift */,
+				D539943D2BB540440087803C /* AddressView.swift */,
+				D539943F2BB541600087803C /* CheckoutView.swift */,
+				D539943B2BB515770087803C /* Order.swift */,
 				D53994352BB3CDE90087803C /* 1_SendingAndReceivingDataWithURLSession.swift */,
 				70FA04D52BB45F10008C8208 /* 2_LoadingImageFromServer.swift */,
 				70FA04D72BB46B31008C8208 /* 3_DisablingForms.swift */,
+				D53994392BB510160087803C /* 4_AddCodableObservableClass.swift */,
+				D53994372BB50B990087803C /* 5_AddingHapticEffects.swift */,
 				D539942B2BB3C8B30087803C /* Assets.xcassets */,
 				D539942D2BB3C8B30087803C /* Preview Content */,
 			);
@@ -148,9 +163,14 @@
 			files = (
 				D539942A2BB3C8B10087803C /* ContentView.swift in Sources */,
 				D53994282BB3C8B10087803C /* CupcakeCornerApp.swift in Sources */,
+				D53994402BB541600087803C /* CheckoutView.swift in Sources */,
+				D539943C2BB515770087803C /* Order.swift in Sources */,
+				D53994382BB50B990087803C /* 5_AddingHapticEffects.swift in Sources */,
 				D53994362BB3CDE90087803C /* 1_SendingAndReceivingDataWithURLSession.swift in Sources */,
+				D539943E2BB540440087803C /* AddressView.swift in Sources */,
 				70FA04D82BB46B31008C8208 /* 3_DisablingForms.swift in Sources */,
 				70FA04D62BB45F10008C8208 /* 2_LoadingImageFromServer.swift in Sources */,
+				D539943A2BB510160087803C /* 4_AddCodableObservableClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +312,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,6 +342,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
