@@ -8,7 +8,20 @@
 import Foundation
 
 @Observable
-class Order {
+class Order:Codable {
+    enum CodingKeys:String,CodingKey {
+        case _type = "type"
+        case _quantity = "quantity"
+        case _specialRequestEnabled = "specialRequestEnabled"
+        case _extraFrosting = "extraFrosting"
+        case _addSprinkles = "addSprinkles"
+        case _name = "name"
+        case _city = "city"
+        case _streetAddress = "streetAddress"
+        case _zip = "zip"
+    }
+    
+    
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
     var type = 0
     var quantity = 3
@@ -29,7 +42,7 @@ class Order {
     var zip = ""
     
     var hasValidAddress:Bool {
-        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        if name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || streetAddress.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || city.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || zip.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             return false
         }
         return true
@@ -49,4 +62,5 @@ class Order {
         
         return cost
     }
+    
 }

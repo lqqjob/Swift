@@ -14,7 +14,7 @@ struct AddingHapticEffects: View {
             counter += 1
         }
         //.increase是内置的触觉反馈变体之一，最好在增加计数器等值时使用。还有很多其他可供选择，包括.success、.warning、.error、.start、.stop等。
-//        .sensoryFeedback(.increase, trigger: counter)
+        .sensoryFeedback(.increase, trigger: counter)
     }
 }
 
