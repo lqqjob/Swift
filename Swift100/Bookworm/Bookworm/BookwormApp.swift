@@ -11,8 +11,8 @@ import SwiftData
 struct BookwormApp: App {
     var body: some Scene {
         WindowGroup {
-            IntroductionSwiftDataAndSwiftUI()
+            ContentView()
         }
-        .modelContainer(for:Student.self)
+        .modelContainer(for:Book.self)
     }
 }
