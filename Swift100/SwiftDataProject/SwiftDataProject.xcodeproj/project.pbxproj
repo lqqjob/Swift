@@ -15,6 +15,9 @@
 		705FD98F2BC038BE0036E2B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD98E2BC038BE0036E2B9 /* User.swift */; };
 		705FD9912BC0393B0036E2B9 /* EditeUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD9902BC0393B0036E2B9 /* EditeUserView.swift */; };
 		705FD9932BC03DBA0036E2B9 /* 2_FilteringQueryUsingPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD9922BC03DBA0036E2B9 /* 2_FilteringQueryUsingPredicate.swift */; };
+		705FD9952BC0F02E0036E2B9 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD9942BC0F02E0036E2B9 /* UsersView.swift */; };
+		705FD9972BC0F7030036E2B9 /* 3_RelationshipsWithSwiftDataSwiftUIAndQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD9962BC0F7030036E2B9 /* 3_RelationshipsWithSwiftDataSwiftUIAndQuery.swift */; };
+		705FD9992BC0F7240036E2B9 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD9982BC0F7240036E2B9 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		705FD98E2BC038BE0036E2B9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		705FD9902BC0393B0036E2B9 /* EditeUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditeUserView.swift; sourceTree = "<group>"; };
 		705FD9922BC03DBA0036E2B9 /* 2_FilteringQueryUsingPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_FilteringQueryUsingPredicate.swift; sourceTree = "<group>"; };
+		705FD9942BC0F02E0036E2B9 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		705FD9962BC0F7030036E2B9 /* 3_RelationshipsWithSwiftDataSwiftUIAndQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_RelationshipsWithSwiftDataSwiftUIAndQuery.swift; sourceTree = "<group>"; };
+		705FD9982BC0F7240036E2B9 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				705FD9802BC038360036E2B9 /* ContentView.swift */,
 				705FD98C2BC038870036E2B9 /* 1_EditingSwiftDataModelObjects.swift */,
 				705FD9922BC03DBA0036E2B9 /* 2_FilteringQueryUsingPredicate.swift */,
+				705FD9962BC0F7030036E2B9 /* 3_RelationshipsWithSwiftDataSwiftUIAndQuery.swift */,
+				705FD9942BC0F02E0036E2B9 /* UsersView.swift */,
+				705FD9982BC0F7240036E2B9 /* Job.swift */,
 				705FD98E2BC038BE0036E2B9 /* User.swift */,
 				705FD9902BC0393B0036E2B9 /* EditeUserView.swift */,
 				705FD9822BC038380036E2B9 /* Assets.xcassets */,
@@ -154,6 +163,9 @@
 				705FD98D2BC038870036E2B9 /* 1_EditingSwiftDataModelObjects.swift in Sources */,
 				705FD97F2BC038360036E2B9 /* SwiftDataProjectApp.swift in Sources */,
 				705FD9932BC03DBA0036E2B9 /* 2_FilteringQueryUsingPredicate.swift in Sources */,
+				705FD9952BC0F02E0036E2B9 /* UsersView.swift in Sources */,
+				705FD9972BC0F7030036E2B9 /* 3_RelationshipsWithSwiftDataSwiftUIAndQuery.swift in Sources */,
+				705FD9992BC0F7240036E2B9 /* Job.swift in Sources */,
 				705FD9912BC0393B0036E2B9 /* EditeUserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

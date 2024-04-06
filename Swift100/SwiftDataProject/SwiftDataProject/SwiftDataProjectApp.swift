@@ -11,7 +11,7 @@ import SwiftData
 struct SwiftDataProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            EditingSwiftDataModelObjects()
+            FilteringQueryUsingPredicate()
         }
         .modelContainer(for:User.self)
     }
