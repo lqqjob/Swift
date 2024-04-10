@@ -13,6 +13,10 @@
 		D50D4A3A2BC392380095CB6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50D4A392BC392380095CB6A /* Preview Assets.xcassets */; };
 		D50D4A412BC393800095CB6A /* 1_HowPropertyWrappersBecomeStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D4A402BC393800095CB6A /* 1_HowPropertyWrappersBecomeStructs.swift */; };
 		D50D4A432BC39A4D0095CB6A /* 2_ShowingMultipleOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D4A422BC39A4D0095CB6A /* 2_ShowingMultipleOptions.swift */; };
+		D50D4A452BC62C430095CB6A /* 3_IntegratingCoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D4A442BC62C430095CB6A /* 3_IntegratingCoreImage.swift */; };
+		D50D4A472BC635EA0095CB6A /* 4_LoadingPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D4A462BC635EA0095CB6A /* 4_LoadingPhotos.swift */; };
+		D50D4A492BC63A960095CB6A /* 5_ShareContentWithShareLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D4A482BC63A960095CB6A /* 5_ShareContentWithShareLink.swift */; };
+		D50D4A4B2BC63D5D0095CB6A /* 6_LeaveAnAppStoreReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50D4A4A2BC63D5D0095CB6A /* 6_LeaveAnAppStoreReview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		D50D4A392BC392380095CB6A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D50D4A402BC393800095CB6A /* 1_HowPropertyWrappersBecomeStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_HowPropertyWrappersBecomeStructs.swift; sourceTree = "<group>"; };
 		D50D4A422BC39A4D0095CB6A /* 2_ShowingMultipleOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_ShowingMultipleOptions.swift; sourceTree = "<group>"; };
+		D50D4A442BC62C430095CB6A /* 3_IntegratingCoreImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_IntegratingCoreImage.swift; sourceTree = "<group>"; };
+		D50D4A462BC635EA0095CB6A /* 4_LoadingPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_LoadingPhotos.swift; sourceTree = "<group>"; };
+		D50D4A482BC63A960095CB6A /* 5_ShareContentWithShareLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_ShareContentWithShareLink.swift; sourceTree = "<group>"; };
+		D50D4A4A2BC63D5D0095CB6A /* 6_LeaveAnAppStoreReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_LeaveAnAppStoreReview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 				D50D4A342BC392370095CB6A /* ContentView.swift */,
 				D50D4A402BC393800095CB6A /* 1_HowPropertyWrappersBecomeStructs.swift */,
 				D50D4A422BC39A4D0095CB6A /* 2_ShowingMultipleOptions.swift */,
+				D50D4A442BC62C430095CB6A /* 3_IntegratingCoreImage.swift */,
+				D50D4A462BC635EA0095CB6A /* 4_LoadingPhotos.swift */,
+				D50D4A482BC63A960095CB6A /* 5_ShareContentWithShareLink.swift */,
+				D50D4A4A2BC63D5D0095CB6A /* 6_LeaveAnAppStoreReview.swift */,
 				D50D4A362BC392380095CB6A /* Assets.xcassets */,
 				D50D4A382BC392380095CB6A /* Preview Content */,
 			);
@@ -143,9 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50D4A472BC635EA0095CB6A /* 4_LoadingPhotos.swift in Sources */,
 				D50D4A352BC392370095CB6A /* ContentView.swift in Sources */,
+				D50D4A4B2BC63D5D0095CB6A /* 6_LeaveAnAppStoreReview.swift in Sources */,
 				D50D4A332BC392370095CB6A /* InstafilterApp.swift in Sources */,
+				D50D4A452BC62C430095CB6A /* 3_IntegratingCoreImage.swift in Sources */,
 				D50D4A432BC39A4D0095CB6A /* 2_ShowingMultipleOptions.swift in Sources */,
+				D50D4A492BC63A960095CB6A /* 5_ShareContentWithShareLink.swift in Sources */,
 				D50D4A412BC393800095CB6A /* 1_HowPropertyWrappersBecomeStructs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
