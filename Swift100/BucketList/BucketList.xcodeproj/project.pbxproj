@@ -16,6 +16,7 @@
 		705FD9D32BD3F9BE0036E2B9 /* 3_SwitchingViewStatesWithEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD9D22BD3F9BE0036E2B9 /* 3_SwitchingViewStatesWithEnums.swift */; };
 		705FD9D52BD3FDC10036E2B9 /* 4_IntegratingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD9D42BD3FDC10036E2B9 /* 4_IntegratingMapKit.swift */; };
 		705FD9D72BD405970036E2B9 /* 5_UsingTouchIDAndFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD9D62BD405970036E2B9 /* 5_UsingTouchIDAndFaceID.swift */; };
+		705FD9D92BD565C90036E2B9 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FD9D82BD565C90036E2B9 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		705FD9D22BD3F9BE0036E2B9 /* 3_SwitchingViewStatesWithEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_SwitchingViewStatesWithEnums.swift; sourceTree = "<group>"; };
 		705FD9D42BD3FDC10036E2B9 /* 4_IntegratingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_IntegratingMapKit.swift; sourceTree = "<group>"; };
 		705FD9D62BD405970036E2B9 /* 5_UsingTouchIDAndFaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_UsingTouchIDAndFaceID.swift; sourceTree = "<group>"; };
+		705FD9D82BD565C90036E2B9 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				705FD9C02BD3F26B0036E2B9 /* BucketListApp.swift */,
 				705FD9C22BD3F26B0036E2B9 /* ContentView.swift */,
+				705FD9D82BD565C90036E2B9 /* EditView.swift */,
 				705FD9CE2BD3F60D0036E2B9 /* 1_ComparableForCustomTypes.swift */,
 				705FD9D02BD3F8100036E2B9 /* 2_WritingDataToTheDocumentsDirectory.swift */,
 				705FD9D22BD3F9BE0036E2B9 /* 3_SwitchingViewStatesWithEnums.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				705FD9D12BD3F8100036E2B9 /* 2_WritingDataToTheDocumentsDirectory.swift in Sources */,
 				705FD9C32BD3F26B0036E2B9 /* ContentView.swift in Sources */,
+				705FD9D92BD565C90036E2B9 /* EditView.swift in Sources */,
 				705FD9D52BD3FDC10036E2B9 /* 4_IntegratingMapKit.swift in Sources */,
 				705FD9C12BD3F26B0036E2B9 /* BucketListApp.swift in Sources */,
 				705FD9D32BD3F9BE0036E2B9 /* 3_SwitchingViewStatesWithEnums.swift in Sources */,
