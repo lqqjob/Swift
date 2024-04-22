@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-enum LoadingState {
+enum LoadingState1 {
     case loading,success,failed
 }
 struct LoadingView:View {
@@ -27,7 +27,7 @@ struct FailedView:View {
     }
 }
 struct SwitchingViewStatesWithEnums: View {
-    @State private var loadingState = LoadingState.loading
+    @State private var loadingState = LoadingState1.loading
     var body: some View {
         switch loadingState {
         case .loading:
