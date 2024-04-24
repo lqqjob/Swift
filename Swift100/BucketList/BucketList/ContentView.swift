@@ -24,41 +24,44 @@ struct Location1 :Codable,Equatable,Identifiable {
 }
 struct ContentView: View {
     let startPosition = MapCameraPosition.region(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 22.757054, longitude: 114.240072), span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)))
-    @State private var locations = [Location1]()
-    @State private var selectedPlace:Location1?
-    
+   @State private var viewModel = ViewModel()
     var body: some View {
-        MapReader { proxy in
-            Map(initialPosition: startPosition) {
-                ForEach(locations) { location in
-//                    Marker(location.name,coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
-                    Annotation(location.name, coordinate: location.coordinate) {
-                        Image(systemName: "star.circle")
-                            .resizable()
-                            .foregroundStyle(.red)
-                            .frame(width: 44,height: 44)
-                            .background(.white)
-                            .clipShape(.circle)
-                            .onLongPressGesture {
-                                selectedPlace = location
-                            }
+        if viewModel.isUnlocked {
+            MapReader { proxy in
+                Map(initialPosition: startPosition) {
+                    ForEach(viewModel.locations) { location in
+    //                    Marker(location.name,coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude))
+                        Annotation(location.name, coordinate: location.coordinate) {
+                            Image(systemName: "star.circle")
+                                .resizable()
+                                .foregroundStyle(.red)
+                                .frame(width: 44,height: 44)
+                                .background(.white)
+                                .clipShape(.circle)
+                                .onLongPressGesture {
+                                    viewModel.selectedPlace = location
+                                }
+                        }
                     }
                 }
-            }
-                 .onTapGesture { position in
-                     if let coordinate = proxy.convert(position,from: .local) {
-                         let newLocation = Location1(id: UUID(), name: "New Location", description: "", latitude: coordinate.latitude, longitude: coordinate.longitude)
-                         locations.append(newLocation)
-                     }
-                 }
-                 .mapStyle(.hybrid)
-                 .sheet(item: $selectedPlace) {place in
-                     EditView(location: place) { newLocation in
-                         if let index = locations.firstIndex(of:place) {
-                             locations[index] = newLocation
+                     .onTapGesture { position in
+                         if let coordinate = proxy.convert(position,from: .local) {
+                             viewModel.addLocation(at: coordinate)
                          }
                      }
-                 }
+                     .mapStyle(.hybrid)
+                     .sheet(item: $viewModel.selectedPlace) {place in
+                         EditView(location: place) {
+                             viewModel.update(location: $0)
+                         }
+                     }
+            }
+        } else {
+            Button("Unlock Places", action: viewModel.authenticate)
+                .padding()
+                .background(.blue)
+                .foregroundStyle(.white)
+                .clipShape(.capsule)
         }
     }
 }

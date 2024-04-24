@@ -18,36 +18,6 @@
             endingLineNumber = "87"
             landmarkName = "fetchNearbyPlaces()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D602D529-E146-43DA-BE67-9DBB21C029F2 - 74831c39ba6589bc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for BucketList.EditView.fetchNearbyPlaces() async -&gt; ()"
-                  moduleName = "BucketList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/orvibo/Documents/Swift/Swift100/BucketList/BucketList/EditView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87">
-               </Location>
-               <Location
-                  uuid = "D602D529-E146-43DA-BE67-9DBB21C029F2 - b48d8c518934cbc5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BucketList.Page, BucketList.Page) -&gt; Swift.Bool in BucketList.EditView.fetchNearbyPlaces() async -&gt; ()"
-                  moduleName = "BucketList"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/orvibo/Documents/Swift/Swift100/BucketList/BucketList/EditView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
