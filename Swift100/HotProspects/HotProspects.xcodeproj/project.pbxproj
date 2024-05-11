@@ -10,6 +10,7 @@
 		705A0E9E2BE7BB2A0065CC88 /* ProspectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705A0E9D2BE7BB2A0065CC88 /* ProspectsView.swift */; };
 		705A0EA02BE7BB3A0065CC88 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705A0E9F2BE7BB3A0065CC88 /* MeView.swift */; };
 		705A0EA22BE7BD770065CC88 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705A0EA12BE7BD770065CC88 /* Prospect.swift */; };
+		705A0EA52BED1B570065CC88 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 705A0EA42BED1B570065CC88 /* CodeScanner */; };
 		705FDA0B2BE287530036E2B9 /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FDA0A2BE287530036E2B9 /* HotProspectsApp.swift */; };
 		705FDA0D2BE287530036E2B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FDA0C2BE287530036E2B9 /* ContentView.swift */; };
 		705FDA0F2BE287550036E2B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705FDA0E2BE287550036E2B9 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705A0EA52BED1B570065CC88 /* CodeScanner in Frameworks */,
 				705FDA2A2BE51F0B0036E2B9 /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +122,7 @@
 			name = HotProspects;
 			packageProductDependencies = (
 				705FDA292BE51F0B0036E2B9 /* SamplePackage */,
+				705A0EA42BED1B570065CC88 /* CodeScanner */,
 			);
 			productName = HotProspects;
 			productReference = 705FDA072BE287530036E2B9 /* HotProspects.app */;
@@ -151,6 +154,7 @@
 			mainGroup = 705FD9FE2BE287530036E2B9;
 			packageReferences = (
 				705FDA282BE51F0B0036E2B9 /* XCLocalSwiftPackageReference "SamplePackage-main" */,
+				705A0EA32BED1B570065CC88 /* XCLocalSwiftPackageReference "CodeScanner-main" */,
 			);
 			productRefGroup = 705FDA082BE287530036E2B9 /* Products */;
 			projectDirPath = "";
@@ -398,6 +402,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		705A0EA32BED1B570065CC88 /* XCLocalSwiftPackageReference "CodeScanner-main" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "CodeScanner-main";
+		};
 		705FDA282BE51F0B0036E2B9 /* XCLocalSwiftPackageReference "SamplePackage-main" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "SamplePackage-main";
@@ -405,6 +413,10 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		705A0EA42BED1B570065CC88 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CodeScanner;
+		};
 		705FDA292BE51F0B0036E2B9 /* SamplePackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SamplePackage;
