@@ -7,6 +7,8 @@
 
 import SwiftUI
 import SwiftData
+import CodeScanner
+import UserNotifications
 struct ProspectsView: View {
     enum FilterType {
         case none,contacted,uncontacted
@@ -25,6 +27,7 @@ struct ProspectsView: View {
         }
     }
     @State private var selectedProspects = Set<Prospect>()
+    @State private var isShowingScanner = false
     var body: some View {
         NavigationStack {
             List(prospects,selection: $selectedProspects) {prospect in
@@ -48,6 +51,10 @@ struct ProspectsView: View {
                             prospect.isContacted.toggle()
                         }
                         .tint(.green)
+                        Button("Remind Me", systemImage: "bell") {
+                            addNotification(for: prospect)
+                        }
+                        .tint(.orange)
                     }
                    
                 }
@@ -58,7 +65,7 @@ struct ProspectsView: View {
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button("Scan", systemImage: "qrcode.viewfinder") {
-//                            isShowingScanner = true
+                            isShowingScanner = true
                         }
                     }
                     ToolbarItem(placement: .topBarLeading) {
@@ -71,6 +78,9 @@ struct ProspectsView: View {
                         }
                     }
                 }
+                .sheet(isPresented: $isShowingScanner, content: {
+                    CodeScannerView(codeTypes: [.qr],simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: handleScan)
+                })
         }
     }
     
@@ -89,6 +99,57 @@ struct ProspectsView: View {
             modelContext.delete(prospect)
         }
     }
+    
+    func handleScan(result:Result<ScanResult,ScanError>) {
+        isShowingScanner = false
+        
+        switch result {
+        case .success(let result):
+            let details = result.string.components(separatedBy: "\n")
+            guard details.count == 2 else { return }
+
+            let person = Prospect(name: details[0], emailAddress: details[1], isContacted: false)
+
+            modelContext.insert(person)
+        case .failure(let error):
+            print("Scanning failed: \(error.localizedDescription)")
+        }
+    }
+    
+    func addNotification(for prospect:Prospect) {
+        let center = UNUserNotificationCenter.current()
+        
+        let addRequest = {
+            let content = UNMutableNotificationContent()
+            content.title = "Contact \(prospect.name)"
+            content.subtitle = prospect.emailAddress
+            content.sound = UNNotificationSound.default
+            
+            var dateComponents = DateComponents()
+            dateComponents.hour = 9
+//            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            center.add(request)
+        }
+        
+        center.getNotificationSettings { setttings in
+            if setttings.authorizationStatus == .authorized {
+                addRequest()
+            }else {
+                center.requestAuthorization(options: [.alert,.badge,.sound]) { success, error in
+                    if success {
+                        addRequest()
+                    }else if let error {
+                        print(error.localizedDescription)
+
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 #Preview {

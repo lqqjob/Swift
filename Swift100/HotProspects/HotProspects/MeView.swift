@@ -9,11 +9,11 @@ import SwiftUI
 import CoreImage.CIFilterBuiltins
 
 struct MeView: View {
-    @AppStorage("Name") private var name = "Anonymous"
+    @AppStorage("Name") private var name = "Anonymoushello"
     @AppStorage("emailAddress") private var emilAddress = "you@yousite.com"
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
-    
+    @State private var qrCode = UIImage()
     var body: some View {
         NavigationStack {
             Form {
@@ -24,13 +24,19 @@ struct MeView: View {
                 TextField("Email address",text: $emilAddress)
                     .textContentType(.emailAddress)
                     .font(.title)
-                Image(uiImage: generateQRCode(from: "\(name)\n\(emilAddress)"))
+                Image(uiImage: qrCode)
                     .interpolation(.none)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200,height: 200)
+                    .contextMenu {
+                        ShareLink(item:Image(uiImage: qrCode),preview: SharePreview("My QR Code",image: Image(uiImage: qrCode)))
+                    }
             }
             .navigationTitle("Your code")
+            .onAppear(perform: updateCode)
+            .onChange(of: name,updateCode)
+            .onChange(of: emilAddress, updateCode)
         }
     }
     
@@ -44,6 +50,9 @@ struct MeView: View {
         }
         
         return UIImage(systemName:"xmark.circle") ?? UIImage()
+    }
+    func updateCode() {
+        qrCode = generateQRCode(from: "\(name)\n\(emilAddress)")
     }
 }
 
