@@ -13,6 +13,9 @@
 		D5FB779B2C1ACD4300AA2E03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5FB779A2C1ACD4300AA2E03 /* Preview Assets.xcassets */; };
 		D5FB77A22C1ACE4400AA2E03 /* 1_HowToUseGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FB77A12C1ACE4400AA2E03 /* 1_HowToUseGestures.swift */; };
 		D5FB77A42C1AF61F00AA2E03 /* 2_AlvesHitTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FB77A32C1AF61F00AA2E03 /* 2_AlvesHitTesting.swift */; };
+		D5FB77A62C1C158200AA2E03 /* 3_Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FB77A52C1C158200AA2E03 /* 3_Timer.swift */; };
+		D5FB77A82C1C194600AA2E03 /* 4_NotifiedAppMovesBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FB77A72C1C194600AA2E03 /* 4_NotifiedAppMovesBackground.swift */; };
+		D5FB77AA2C1C1CD800AA2E03 /* 5_SpecificAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FB77A92C1C1CD800AA2E03 /* 5_SpecificAccessibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		D5FB779A2C1ACD4300AA2E03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5FB77A12C1ACE4400AA2E03 /* 1_HowToUseGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_HowToUseGestures.swift; sourceTree = "<group>"; };
 		D5FB77A32C1AF61F00AA2E03 /* 2_AlvesHitTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_AlvesHitTesting.swift; sourceTree = "<group>"; };
+		D5FB77A52C1C158200AA2E03 /* 3_Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_Timer.swift; sourceTree = "<group>"; };
+		D5FB77A72C1C194600AA2E03 /* 4_NotifiedAppMovesBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_NotifiedAppMovesBackground.swift; sourceTree = "<group>"; };
+		D5FB77A92C1C1CD800AA2E03 /* 5_SpecificAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_SpecificAccessibility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				D5FB77952C1ACD4100AA2E03 /* ContentView.swift */,
 				D5FB77A12C1ACE4400AA2E03 /* 1_HowToUseGestures.swift */,
 				D5FB77A32C1AF61F00AA2E03 /* 2_AlvesHitTesting.swift */,
+				D5FB77A52C1C158200AA2E03 /* 3_Timer.swift */,
+				D5FB77A72C1C194600AA2E03 /* 4_NotifiedAppMovesBackground.swift */,
+				D5FB77A92C1C1CD800AA2E03 /* 5_SpecificAccessibility.swift */,
 				D5FB77972C1ACD4300AA2E03 /* Assets.xcassets */,
 				D5FB77992C1ACD4300AA2E03 /* Preview Content */,
 			);
@@ -145,7 +154,10 @@
 			files = (
 				D5FB77A22C1ACE4400AA2E03 /* 1_HowToUseGestures.swift in Sources */,
 				D5FB77962C1ACD4100AA2E03 /* ContentView.swift in Sources */,
+				D5FB77AA2C1C1CD800AA2E03 /* 5_SpecificAccessibility.swift in Sources */,
+				D5FB77A82C1C194600AA2E03 /* 4_NotifiedAppMovesBackground.swift in Sources */,
 				D5FB77A42C1AF61F00AA2E03 /* 2_AlvesHitTesting.swift in Sources */,
+				D5FB77A62C1C158200AA2E03 /* 3_Timer.swift in Sources */,
 				D5FB77942C1ACD4100AA2E03 /* FlashzillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
