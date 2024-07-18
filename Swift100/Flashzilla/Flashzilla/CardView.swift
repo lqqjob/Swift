@@ -10,13 +10,23 @@ import SwiftUI
 struct CardView: View {
     let card:Card
     var removal:(()->Void)? = nil
-
+    @Environment(\.accessibilityDifferentiateWithoutColor) var accessibilityDifferentiateWithoutColor
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
-                .fill(.white)
+                .fill(
+                    accessibilityDifferentiateWithoutColor
+                    ? .white
+                    : .white
+                        .opacity(1 - Double(abs(offset.width / 50)))
+                )
+                .background(
+                    accessibilityDifferentiateWithoutColor ? nil :
+                RoundedRectangle(cornerRadius: 25.0)
+                    .fill(offset.width > 0 ? .green : .red)
+                )
                 .shadow(radius: 10)
             VStack {
                 Text(card.promot)
