@@ -246,7 +246,7 @@ student.sayHello()
 
 extension Numeric {
     func squared() -> Self {
-        1
+        self * self
     }
 }
 
