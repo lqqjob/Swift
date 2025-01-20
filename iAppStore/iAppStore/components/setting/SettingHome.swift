@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LinkString {
+struct LinkString:Identifiable {
     let url:String
     var id:String {url}
 }
@@ -28,6 +28,9 @@ struct SettingHome: View {
             }
             .navigationTitle("设置")
             .navigationBarTitleDisplayMode(.automatic)
+        }
+        .sheet(item: $linkagePage) { linkage in
+            SafariView(url: URL(string:linkage.url)!)
         }
     }
 }
@@ -58,15 +61,7 @@ struct SettingItemCell:View {
                     }
                     .contentShape(Rectangle())
                     .onTapGesture {
-                        UIApplication.shared.setAlternateIconName(index == 0 ? nil : type) {error in
-                            if let error = error {
-                                
-                            }else {
-                                
-                            }
-                            
-                        }
-                        
+                        UIApplication.shared.setAlternateIconName(index == 0 ? nil : type)
                         withAnimation {
                             iconViewIsExpanded = false;
                         }
@@ -78,8 +73,35 @@ struct SettingItemCell:View {
             .accentColor(Color.tsmg_placeholderText)
         }else {
             HStack{
+                Button(action:{
+                    switch index {
+                    case 0:
+                        break
+                    case 1:
+                        let url = URL(string: "itms-apps://itunes.apple.com")
+                        UIApplication.shared.open(url!)
+                    case 2:
+                        linkPage = LinkString(url: "https://app.chandashi.com")
+                    case 3:
+                        linkPage = LinkString(url: "https://app.diandian.com")
+                    case 4:
+                        linkPage = LinkString(url: "https://www.qimai.cn")
+                    case 5:
+                        linkPage = LinkString(url: "https://github.com/37MobileTeam/iAppStore-SwiftUI")
+                    case 6:
+                        linkPage = LinkString(url: "https://juejin.cn/user/1002387318511214")
+                    default:
+                        break
+                    }
+                }) {
+                    Text(title).foregroundColor(Color.tsmg_label)
+                }
                 
+                Spacer()
+                
+                Image(systemName: "chevron.right").imageScale(.small).foregroundColor(Color.tsmg_placeholderText)
             }
+            .padding([.top,.bottom],10)
         }
     }
 }
