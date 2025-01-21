@@ -24,6 +24,31 @@ struct SettingHome: View {
                             SettingItemCell(linkPage: $linkagePage, title: title, index: items.firstIndex(of: title)!)
                         }
                     }
+                    Section(header:Text("服务")) {
+                        NavigationLink(destination: AppFavoritesView()) {
+                            HStack {
+                                Text("App 收藏夹")
+                                Spacer()
+                            }
+                            .padding([.top,.bottom],10)
+                        }
+                        NavigationLink(destination: AppleServicesView()) {
+                            HStack {
+                                Text("苹果常用网站")
+                                Spacer()
+                            }
+                            .padding([.top,.bottom],10)
+                        }
+                        
+                        AppleSubscriptionManagerView(linkPage: $linkagePage)
+                    }
+                    Section(header: Text("关于")) {
+                        NavigationLink(destination: AboutAppView()) {
+                            Text("关于应用").frame(height:50)
+                        }
+                        SettingItemCell(linkPage: $linkagePage, title: "GitHub 开源", index: items.count)
+                        SettingItemCell(linkPage: $linkagePage, title: "37手游移动客户端团队", index: items.count + 1)
+                    }
                 }
             }
             .navigationTitle("设置")
@@ -32,6 +57,23 @@ struct SettingHome: View {
         .sheet(item: $linkagePage) { linkage in
             SafariView(url: URL(string:linkage.url)!)
         }
+    }
+}
+
+struct AppleSubscriptionManagerView:View {
+    @Binding var linkPage:LinkString?
+    private let subscriptionsURL = "https://apps.apple.com/account/subscriptions"
+    var body: some View {
+        HStack{
+            Button {
+                linkPage = LinkString(url: subscriptionsURL)
+            } label: {
+                Text("苹果订阅管理").foregroundColor(Color.primary)
+            }
+            Spacer()
+            Image(systemName: "chevron.right").imageScale(.small).foregroundColor(Color.tsmg_placeholderText)
+        }
+        .padding([.top,.bottom],10)
     }
 }
 
