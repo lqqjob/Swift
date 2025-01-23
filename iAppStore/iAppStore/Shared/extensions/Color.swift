@@ -16,4 +16,8 @@ extension Color {
     static var tsmg_placeholderText:Color {
         Color(UIColor.placeholderText)
     }
+    
+    static var tsmg_tertiaryLabel: Color {
+        Color(UIColor.tertiaryLabel)
+    }
 }
