@@ -12,6 +12,9 @@ extension Color {
     static var tsmg_systemBackground: Color {
         Color(UIColor.systemBackground)
     }
+    static var tsmg_tertiarySystemGroupedBackground: Color {
+        Color(UIColor.tertiarySystemGroupedBackground)
+    }
     static var tsmg_label:Color {
         Color(UIColor.label)
     }
