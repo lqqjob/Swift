@@ -18,6 +18,18 @@ struct SearchHome: View {
         NavigationView {
             Group{
                 SearchBarView(searchText: $searchText, regionName: $regionName, appModel: appModel).padding([.leading,.trailing])
+                ZStack{
+                    List {
+                        ForEach(appModel.results,id: \.trackId) {item in
+                            let index = appModel.results.firstIndex {$0.trackId == item.trackId}
+                            
+                            NavigationLink(destination: AppDetailView()) {
+                                
+                            }
+                        }
+                    }
+                }
+                Spacer()
             }
             .navigationTitle("搜索")
             .navigationBarTitleDisplayMode(.automatic)
