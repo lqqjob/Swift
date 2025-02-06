@@ -1,0 +1,5 @@
+
+# gitignore
+
+*.DS_Store
+iAppStore/iAppStore.xcodeproj/project.pbxproj
