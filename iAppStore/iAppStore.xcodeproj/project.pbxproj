@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D59F2BC72D2387150033387E /* iAppStore */ = {
+		D57DDBF52D55A53A0085721D /* iAppStore */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = iAppStore;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 		D59F2BBC2D2387150033387E = {
 			isa = PBXGroup;
 			children = (
-				D59F2BC72D2387150033387E /* iAppStore */,
+				D57DDBF52D55A53A0085721D /* iAppStore */,
 				D59F2BC62D2387150033387E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D59F2BC72D2387150033387E /* iAppStore */,
+				D57DDBF52D55A53A0085721D /* iAppStore */,
 			);
 			name = iAppStore;
 			packageProductDependencies = (

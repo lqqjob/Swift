@@ -21,12 +21,16 @@ struct SearchHome: View {
                 ZStack{
                     List {
                         ForEach(appModel.results,id: \.trackId) {item in
-                            let index = appModel.results.firstIndex {$0.trackId == item.trackId}
+                            let _ = appModel.results.firstIndex {$0.trackId == item.trackId}
                             
                             NavigationLink(destination: AppDetailView()) {
                                 
                             }
                         }
+                    }
+                    
+                    if filterViewIsExpanded {
+                        SearchFilterView(searchText: $searchText, regionName: $regionName, filterViewIsExpanded: $filterViewIsExpanded, appModel: appModel)
                     }
                 }
                 Spacer()
@@ -48,6 +52,51 @@ struct SearchHome: View {
             .frame(height: 30)
         }
 
+    }
+}
+
+struct SearchFilterView:View {
+    @Binding var searchText:String
+    @Binding var regionName:String
+    @Binding var filterViewIsExpanded:Bool
+    @ObservedObject var appModel:AppDetailModel
+    
+    var body: some View {
+        
+        VStack {
+            Divider()
+            ScrollView {
+                ForEach(0..<TSMGConstants.regionTypeLists.count,id: \.self) { index in
+                    HStack {
+                        let type = TSMGConstants.regionTypeLists[index]
+                        if type == regionName {
+                            Text(type).padding(.horizontal).padding(.top,10).foregroundStyle(.blue)
+                        }else {
+                            Text(type).padding(.horizontal).padding(.top,10)
+                        }
+                        Spacer()
+                        if type == regionName {
+                            Image(systemName: "checkmark").padding(.horizontal).padding(.top,10).foregroundStyle(.blue)
+                        }
+                    }
+                    .background(Color.tsmg_systemBackground)
+                    .onTapGesture {
+                        let type = TSMGConstants.regionTypeLists[index]
+                        if searchText.isNotEmpty && type != regionName {
+                            appModel.searchAppData(nil, searchText, type)
+                        }
+                        
+                        withAnimation {
+                            regionName = type
+                            filterViewIsExpanded = false
+                        }
+                    }
+                }
+            }
+            .background(Color.tsmg_systemBackground)
+            .frame(maxHeight: 300).offset(y:-8)
+            Spacer()
+        }
     }
 }
 
@@ -98,7 +147,9 @@ struct SearchBarView:View {
         
     }
     func fetchSearch() {
-        
+        debugPrint(searchText)
+        appModel.searchAppData(nil, searchText, regionName)
+
     }
     func cancelSearch() {
         searchText = ""

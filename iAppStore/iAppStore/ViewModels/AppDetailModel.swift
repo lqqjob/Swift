@@ -12,7 +12,8 @@ class AppDetailModel:ObservableObject {
     @Published var results:[AppDetail] = []
     @Published var isLoading:Bool = false
     
-    func search(_ appId:String?,_ keyWord:String?,_ regionName:String) {
+    func searchAppData(_ appId:String?,_ keyWord:String?,_ regionName:String) {
+        let regionId = TSMGConstants.regionTypeListIds[regionName] ?? "cn"
         
     }
 }
