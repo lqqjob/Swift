@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 extension Color {
+    public static var tsmg_blue: Color {
+        Color("tsmg_blue", bundle: nil)
+    }
     static var tsmg_systemBackground: Color {
         Color(UIColor.systemBackground)
     }
