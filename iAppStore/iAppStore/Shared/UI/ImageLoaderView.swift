@@ -51,6 +51,7 @@ class ImageLoaderService:ObservableObject {
     
     init(url:URL) {
         self.url = url
+        loadImage()
         
     }
     private func loadImage() {

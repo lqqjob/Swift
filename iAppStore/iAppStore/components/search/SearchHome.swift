@@ -21,10 +21,9 @@ struct SearchHome: View {
                 ZStack{
                     List {
                         ForEach(appModel.results,id: \.trackId) {item in
-                            let _ = appModel.results.firstIndex {$0.trackId == item.trackId}
-                            
+                            let index = appModel.results.firstIndex {$0.trackId == item.trackId}
                             NavigationLink(destination: AppDetailView()) {
-                                
+                                SearchCellView(index: index ?? 0, item: item).frame(height:100)
                             }
                         }
                     }

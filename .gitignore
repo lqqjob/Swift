@@ -2,4 +2,4 @@
 # gitignore
 
 *.DS_Store
-iAppStore/iAppStore.xcodeproj/project.xcworkspace/xcuserdata/mlqq.xcuserdatad/UserInterfaceState.xcuserstate
+xcuserdata/
