@@ -27,45 +27,42 @@ struct SearchCellView: View {
                     .frame(width: 75,height: 75)
             }
             
-            VStack(alignment: .leading) {
-                
-                HStack(alignment:.top) {
-                    Text("\(index + 1)")
-                        .font(.system(size: 16,weight: .heavy,design: .default))
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
-                    VStack(alignment: .leading) {
-                        Text(item.trackName)
-                            .foregroundStyle(.tsmgBlue)
-                            .font(.headline)
+            HStack(alignment:.top) {
+                Text("\(index + 1)")
+                    .font(.system(size: 16,weight: .heavy,design: .default))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
+                VStack(alignment: .leading) {
+                    Text(item.trackName)
+                        .foregroundStyle(.tsmgBlue)
+                        .font(.headline)
+                        .lineLimit(2)
+                        .truncationMode(.tail)
+                    Spacer().frame(height:5)
+                    if isShowAppDataSize {
+                        Text("占用大小：\(item.fileSizeMB)").font(.footnote).lineLimit(1).foregroundStyle(.gray)
+                        Text("最低支持系统：\(item.minimumOsVersion)").font(.footnote).lineLimit(1).foregroundStyle(.gray)
+                    }else {
+                        Text(item.description.replacingOccurrences(of: "\n", with: ""))
+                            .foregroundStyle(.secondary)
+                            .font(.footnote)
                             .lineLimit(2)
                             .truncationMode(.tail)
-                        Spacer().frame(height:5)
-                        if isShowAppDataSize {
-                            Text("占用大小：\(item.fileSizeMB)").font(.footnote).lineLimit(1).foregroundStyle(.gray)
-                            Text("最低支持系统：\(item.minimumOsVersion)").font(.footnote).lineLimit(1).foregroundStyle(.gray)
-                        }else {
-                            Text(item.description.replacingOccurrences(of: "\n", with: ""))
-                                .foregroundStyle(.secondary)
-                                .font(.footnote)
-                                .lineLimit(2)
-                                .truncationMode(.tail)
-                        }
-                        Spacer().frame(height: 10)
-                        HStack{
-                            Text((item.genres).joined(separator: ",")).font(.footnote)
-                            
-                            if item.price != 0.0 {
-                                Text(item.formattedPrice ?? "-").font(.footnote).foregroundStyle(.pink)
-                            }
-                                
-                        }
-                        .frame(height: 10)
-                        
-                        Text(item.artistName).font(.footnote).lineLimit(1).foregroundStyle(.gray)
                     }
+                    Spacer().frame(height: 10)
+                    HStack{
+                        Text((item.genres).joined(separator: ",")).font(.footnote)
+                        
+                        if item.price != 0.0 {
+                            Text(item.formattedPrice ?? "-").font(.footnote).foregroundStyle(.pink)
+                        }
+                        
+                    }
+                    .frame(height: 10)
+                    
+                    Text(item.artistName).font(.footnote).lineLimit(1).foregroundStyle(.gray)
                 }
             }
-
+                
         }
         .contextMenu {
             Text(item.artistName)
