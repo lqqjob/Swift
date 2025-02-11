@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct AppDetailView: View {
+    var appId:String
+    var regionName:String
+    var item:AppRank?
+    @StateObject private var appModel = AppDetailModel()
+    @State private var isShowingQRCode = false
+    @State private var isAppFavorites = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Group {
+            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        }
     }
 }
 
 #Preview {
-    AppDetailView()
+    NavigationView {
+        AppDetailView(appId: "1669437212", regionName: "中国")
+    }
 }
