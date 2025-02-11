@@ -65,7 +65,7 @@ struct SearchCellView: View {
                 
         }
         .contextMenu {
-            Text(item.artistName)
+            AppContextMenu(appleID: String(item.trackId), bundleID: item.bundleId, appUrl: item.trackViewUrl, developerUrl: item.artistViewUrl)
         }
     }
 }
