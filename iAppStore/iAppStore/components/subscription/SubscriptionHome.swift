@@ -48,7 +48,7 @@ struct SubscriptionHome: View {
     private var subscripeListView:some View {
         List {
             ForEach(subscripeVM.subscripe,id: \.startTimeStamp) {item in
-                NavigationLink(destination: AppDetailView()) {
+                NavigationLink(destination: AppDetailView(appId: String(item.appId), regionName: item.regionName)) {
                     SubscripteCellView(item: item)
                 }
             }

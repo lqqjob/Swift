@@ -18,6 +18,7 @@ struct AppDetailView: View {
         Group {
             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         }
+//        .navigationBarTitle(item?.imName.label ?? appModel.app?.trackName ?? "",displayMode: .large)
     }
 }
 

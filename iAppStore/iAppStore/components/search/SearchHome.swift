@@ -22,7 +22,8 @@ struct SearchHome: View {
                     List {
                         ForEach(appModel.results,id: \.trackId) {item in
                             let index = appModel.results.firstIndex {$0.trackId == item.trackId}
-                            NavigationLink(destination: AppDetailView()) {
+                            
+                            NavigationLink(destination: AppDetailView(appId:String(item.trackId),regionName: regionName,item:nil)) {
                                 SearchCellView(index: index ?? 0, item: item).frame(height:100)
                             }
                         }
