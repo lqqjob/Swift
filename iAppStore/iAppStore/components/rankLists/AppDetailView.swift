@@ -42,7 +42,7 @@ struct AppDetailView: View {
 
         }))
         .sheet(isPresented: $isShowingQRCode) {
-        
+            QRCodeView(title: "扫一扫下载", subTitle: "App Store 上的“\(item?.imName.label ?? appModel.app?.trackName ?? "")”", qrCodeContent: item?.id.label ?? appModel.app?.trackViewUrl ?? "error", isShowingQRCode: $isShowingQRCode)
         }
     }
     
