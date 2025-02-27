@@ -16,7 +16,7 @@ struct AppDetailView: View {
     @State private var isAppFavorites = false
     var body: some View {
         Group {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            AppDetailContentView(appModel: appModel)
         }
         .navigationBarTitle(item?.imName.label ?? appModel.app?.trackName ?? "",displayMode: .large)
         .navigationBarBackButtonHidden(false)
@@ -43,6 +43,11 @@ struct AppDetailView: View {
         }))
         .sheet(isPresented: $isShowingQRCode) {
             QRCodeView(title: "扫一扫下载", subTitle: "App Store 上的“\(item?.imName.label ?? appModel.app?.trackName ?? "")”", qrCodeContent: item?.id.label ?? appModel.app?.trackViewUrl ?? "error", isShowingQRCode: $isShowingQRCode)
+        }
+        .onAppear {
+            if appModel.app == nil {
+                appModel.searchAppData(appId, nil, regionName)
+            }
         }
     }
     
