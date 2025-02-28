@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 import Combine
-struct ImageLoaderView<Placeholder:View,ConfiguredImage:View>:View {
+struct ImageLoaderView<Placeholder:View,ConfiguredImage:View>: View {
     var url:String?
     private let placeholder:()->Placeholder
     private let image:(Image) -> ConfiguredImage
