@@ -32,6 +32,15 @@ struct AppDetailContentView: View {
 
                     }
                 AppDetailScreenShowView(appModel: appModel)
+                AppDetailContentSectionView(appModel: appModel)
+                AppdetailFooterView(appModel: appModel)
+            }
+            .alert(item: $alertType) { type in
+                switch type {
+                case.copyBundleId:
+                    appModel.app?.bundleId.copyToClipboard()
+                    return Alert(title: Text("提示"),message: Text("包名复制成功"),dismissButton: .default(Text("OK")))
+                }
             }
         }
     }
@@ -125,7 +134,7 @@ struct AppDetailScreenShowView:View {
     @State private var extendiPadShot:Bool = false
     var body: some View {
         HStack {
-            Text("预览").font(.title3).fontWeight(.bold).padding([.top,.bottom],12)
+            Text("预览").font(.title3).fontWeight(.bold).padding([.top,.leading],12)
             Spacer()
         }
         VStack (alignment: .leading) {
@@ -263,6 +272,153 @@ struct AppDetailBigImageShowView :View {
         }
         .padding([.leading,.trailing],5)
         Spacer()
+    }
+}
+
+struct AppDetailContentSectionView:View {
+    @ObservedObject var appModel:AppDetailModel
+    var body: some View {
+        MoreParagraphView(text: appModel.app?.description)
+            .padding([.leading,.trailing],10)
+            .padding(.bottom,12)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(appModel.app?.artistName ?? "").foregroundStyle(.blue).font(.subheadline)
+                Spacer().frame(height: 5)
+                Text("开发者").font(.footnote).foregroundStyle(.gray)
+            }
+            Spacer()
+            Image(systemName: "chevron.right").foregroundStyle(.gray).font(.body)
+        }
+        .background(Color.tsmg_systemBackground)
+        .padding(12)
+        .onTapGesture {
+            if let url = URL(string: appModel.app?.artistViewUrl ?? "") {
+                UIApplication.shared.open(url)
+            }
+        }
+        Divider().padding(.bottom,15).padding([.leading,.trailing],12)
+        HStack {
+            Text("新功能").font(.title3).fontWeight(.bold).padding(.leading,12)
+            Spacer()
+        }
+        HStack {
+            Text("版本 \(appModel.app?.version ?? "")").foregroundStyle(.gray).font(.subheadline).padding(.leading,12)
+            Spacer()
+            Text(appModel.app?.currentVersionReleaseTime ?? "").foregroundStyle(.gray).font(.subheadline).padding(.trailing,12)
+        }.padding(.top,12)
+    }
+}
+
+struct MoreParagraphView:View {
+    let text:String?
+    @State private var showMoreText = false
+    private var paragraphText:String {
+        if let text = text {
+            return text
+        }else {
+            return ""
+        }
+    }
+    var body: some View {
+        ZStack(alignment: .bottomTrailing, content: {
+            HStack {
+                Text(paragraphText)
+                    .font(.subheadline)
+                    .lineLimit(showMoreText ? .max : 3)
+                Spacer()
+            }
+            
+            if !showMoreText {
+                Button("更多") {
+                    withAnimation {
+                        showMoreText = true
+                    }
+                }
+                .font(.subheadline)
+                .foregroundStyle(.blue)
+                .background(Color.tsmg_systemBackground)
+                .offset(x:5,y: 0)
+                .shadow(color:.tsmg_systemBackground, radius: 3,x: -12)
+            }
+        })
+    }
+}
+
+struct AppdetailFooterView : View {
+    @ObservedObject var appModel:AppDetailModel
+    
+    var body: some View {
+        HStack {
+            Text("信息").font(.title3).fontWeight(.bold).padding([.top,.leading],12)
+            Spacer()
+        }
+        
+        Group {
+            AppDetailFooterCellView(name: "评分", description: appModel.app?.averageRating ?? "")
+            AppDetailFooterCellView(name: "评论", description: String(appModel.app?.userRatingCount ?? 0) + "条")
+            AppDetailFooterCellView(name: "占用大小", description: appModel.app?.fileSizeMB ?? "")
+            AppDetailFooterCellView(name: "最低支持系统", description: appModel.app?.minimumOsVersion ?? "")
+            AppDetailFooterCellView(name: "类别", description: (appModel.app?.genres ?? []).joined(separator: "、"))
+            AppDetailFooterCellView(name: "供应商", description: appModel.app?.sellerName ?? "",extendText: appModel.app?.artistName ?? "")
+        }
+        
+        Group {
+            AppDetailFooterCellView(name: "兼容性", description: "\(appModel.app?.supportedDevices.count ?? 0)种", extendText: (appModel.app?.supportedDevices ?? []).joined(separator: "\n"))
+            AppDetailFooterCellView(name: "支持的语言", description: "\(appModel.app?.languageCodesISO2A.count ?? 0)种", extendText: (appModel.app?.languageCodesISO2A ?? []).joined(separator: "\n"))
+            AppDetailFooterCellView(name: "年龄分级", description: appModel.app?.contentAdvisoryRating ?? "", extendText: (appModel.app?.advisories ?? []).joined(separator: "\n"))
+            AppDetailFooterCellView(name: "更新时间", description: appModel.app?.currentVersionReleaseTime ?? "")
+            AppDetailFooterCellView(name: "上架时间", description: appModel.app?.releaseTime ?? "")
+        }
+        
+        Spacer().frame(height: 30)
+        
+    }
+}
+struct AppDetailFooterCellView : View{
+    var name:String
+    var description:String
+    var extendText:String?
+    
+    @State private var isShowExtendText = false
+    var body : some View {
+        Group {
+            if extendText == nil {
+                HStack {
+                    Text(name).font(.subheadline).foregroundStyle(.gray)
+                    Spacer()
+                    Text(description).font(.subheadline)
+                }
+            }else {
+                if isShowExtendText {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text(name).font(.subheadline).foregroundStyle(.gray)
+                            Text(description).font(.subheadline)
+                            if extendText != nil && description != extendText {
+                                Text(extendText ?? "").font(.subheadline)
+                            }
+                        }
+                        Spacer()
+                    }
+                }else {
+                    HStack {
+                        Text(name).font(.subheadline).foregroundStyle(.gray)
+                        Spacer()
+                        Text(description).font(.subheadline)
+                        Image(systemName: "chevron.down").foregroundStyle(.gray).font(.body)
+                    }
+                    .background(Color.tsmg_systemBackground)
+                    .onTapGesture {
+                        isShowExtendText = true
+                    }
+                }
+            }
+        }
+        .padding([.top,.bottom],10)
+        .padding([.leading,.trailing],12)
+        
+        Divider().padding(.top,5).padding([.leading,.trailing],10)
     }
 }
 #Preview {
