@@ -22,7 +22,7 @@ struct SubscriptionAddView: View {
     @State private var regionName:String  = "中国"
     @State private var filterViewIsExpanded = false
     @StateObject private var detailVM = AppDetailModel()
-    
+    @State private var alertType:SubscripeAddAlertType?
     var body: some View {
         VStack {
             titleView.padding(.bottom,20)
@@ -53,11 +53,32 @@ struct SubscriptionAddView: View {
     
     
     func commitSearchApp() {
-        
+        if appleIdText.isNotEmpty,subscripeType != 1 {
+            detailVM.searchAppData(appleIdText, nil, regionName)
+        }
     }
     
     func onSearchButtonPress() {
-     
+        guard appleIdText.isNotEmpty else {
+            alertType = .searchEmptyError
+            return
+        }
+        
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        commitSearchApp()
+    }
+    func onConfirmButtonPress() {
+        if appleIdText.isEmpty || (subscripeType != 1 && detailVM.app != nil) {
+            alertType = .parameterError
+            return
+        }
+        
+        if subscripeVM.subscribeExist(appId: appleIdText) {
+            alertType = .existCheckError
+            return
+        }
+        
+        
     }
 }
 
@@ -192,7 +213,7 @@ extension SubscriptionAddView {
     
     var confirmButton:some View {
         Button {
-            
+
         } label: {
             Text("确认添加")
                 .font(.title3)
