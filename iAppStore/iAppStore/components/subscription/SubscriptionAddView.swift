@@ -42,6 +42,26 @@ struct SubscriptionAddView: View {
                         .padding(.bottom,15)
                 }else {
                     searchUpdateOrRemoveAppRow.padding(.bottom,15)
+                    if detailVM.app != nil && !detailVM.isLoading {
+                        List {
+                            Text("确认此 App 就是新的订阅的应用，否则请重新搜索～").font(.footnote)
+                            ForEach(detailVM.results,id: \.trackId) {item in
+                                let index = detailVM.results.firstIndex {
+                                    $0.trackId == item.trackId
+                                }
+                                SearchCellView(index: index ?? 0, item: item).frame(height:110)
+                                
+                            }
+                        }
+                        .frame(minHeight: 180)
+                        .padding(.bottom,15)
+                        HStack {
+                            Text("当前版本：").font(.footnote)
+                            Text(detailVM.app?.version ?? "未知")
+                            Spacer()
+                        }
+                        .padding(.bottom,15)
+                    }
                 }
                 
                 confirmButton.padding([.top,.bottom],25)
@@ -49,9 +69,23 @@ struct SubscriptionAddView: View {
             .padding([.leading,.trailing],12)
             Spacer()
         }
+        .alert(item: $alertType) {
+            alertContent($0)
+        }
     }
     
-    
+    func alertContent(_ type:SubscripeAddAlertType) -> Alert {
+        var error = ""
+        switch type {
+        case .parameterError:
+            error = "当前填写的参数不完整，请检查清楚～"
+        case .searchEmptyError:
+            error = "搜索内容不能为空～"
+        case .existCheckError:
+            error = "已经存在相同 App ID 的检查项，请检查确认～"
+        }
+        return Alert(title: Text("提示"),message: Text(error),dismissButton: .default(Text("确认")))
+    }
     func commitSearchApp() {
         if appleIdText.isNotEmpty,subscripeType != 1 {
             detailVM.searchAppData(appleIdText, nil, regionName)
@@ -68,7 +102,7 @@ struct SubscriptionAddView: View {
         commitSearchApp()
     }
     func onConfirmButtonPress() {
-        if appleIdText.isEmpty || (subscripeType != 1 && detailVM.app != nil) {
+        if appleIdText.isEmpty || (subscripeType != 1 && detailVM.app == nil) {
             alertType = .parameterError
             return
         }
@@ -78,6 +112,9 @@ struct SubscriptionAddView: View {
             return
         }
         
+        subscripeVM.addSubscribe(appId: appleIdText, regionName: regionName, subscribe: subscripeType, appDetail: detailVM.app)
+        
+        isAddPresented = false
         
     }
 }
@@ -213,7 +250,7 @@ extension SubscriptionAddView {
     
     var confirmButton:some View {
         Button {
-
+            onConfirmButtonPress()
         } label: {
             Text("确认添加")
                 .font(.title3)

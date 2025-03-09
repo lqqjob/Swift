@@ -76,6 +76,7 @@ class AppSubscripeModel : ObservableObject {
                 }
             
             case .failure(_):
+                break;
                 
             }
         }
