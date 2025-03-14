@@ -16,6 +16,13 @@ class AppRankModel:ObservableObject {
     @Published var alertMsg:String = ""
     @Published var isShowAlert:Bool = false
     private var cancelable = Set<AnyCancellable>()
+    @Published var isLoading:Bool = false
     
+    init(){
+        self.addSubcriber()
+    }
+    private func addSubcriber() {
+        
+    }
     
 }
