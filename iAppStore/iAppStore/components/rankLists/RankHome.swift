@@ -20,19 +20,24 @@ struct RankHome: View {
                     emptyView
                 }else {
                     if appRankModel.results.isEmpty {
-                        
+                        emptyView
                     }else {
                         VStack {
-                            
+                            listView
                         }
                         .padding(.top,75)
                     }
                 }
             }
+            .background(Color.clear)
+            .alert(isPresented: $appRankModel.isShowAlert) {
+                Alert(title: Text("Error"),message: Text(appRankModel.alertMsg))
+            }
+            .navigationBarTitle(appRankModel.rankTitle,displayMode: .inline)
         }
         .onAppear {
             if appRankModel.results.isEmpty {
-//                appRankModel.r
+                appRankModel.fetchRankData(rankName, categoryName, rankName)
             }
         }
     }
@@ -41,7 +46,7 @@ extension RankHome {
     var emptyView :some View {
         VStack {
             Spacer()
-            Image(systemName: "tray.and.arrow.dowm")
+            Image(systemName: "tray.and.arrow.down")
                 .font(Font.system(size: 60))
                 .foregroundStyle(Color.tsmg_tertiaryLabel)
             Spacer()
@@ -57,7 +62,7 @@ extension RankHome {
                 NavigationLink {
                     AppDetailView(appId: item.id.attributes.imID, regionName: regionName, item: item)
                 } label: {
-                    Text(item.title.label)
+                    RankCellView(index: index ?? 0, regionName: regionName, item: item)
                 }
 
             }
