@@ -28,6 +28,7 @@ struct RankHome: View {
                         .padding(.top,75)
                     }
                 }
+                stickyHeaderVieww
             }
             .background(Color.clear)
             .alert(isPresented: $appRankModel.isShowAlert) {
@@ -65,6 +66,16 @@ extension RankHome {
                     RankCellView(index: index ?? 0, regionName: regionName, item: item)
                 }
 
+            }
+        }
+    }
+    
+    var stickyHeaderVieww: some View {
+        ZStack(alignment: Alignment.top) {
+            VStack {
+                Spacer().frame(height: 10)
+                Text(appRankModel.rankUpdated).font(.footnote)
+                Spacer()
             }
         }
     }
