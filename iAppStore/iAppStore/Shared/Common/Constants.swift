@@ -8,6 +8,45 @@
 import Foundation
 struct TSMGConstants {
     
+    static var rankingTypeLists: [String] = [
+        "热门免费榜",
+        "热门付费榜",
+        "畅销榜",
+        "新上架榜",
+        "新上架的免费榜",
+        "新上架的付费榜",
+        "热门免费 iPad 榜",
+        "热门付费 iPad 榜",
+        "畅销的 iPad 榜",
+    ]
+    static var categoryTypeLists: [String] = [
+        "所有 App",
+        "游戏",
+        "社交",
+        "效率",
+        "图书",
+        "商务",
+        "娱乐",
+        "音乐",
+        "教育",
+        "财务",
+        "天气",
+        "工具",
+        "旅游",
+        "体育",
+        "购物",
+        "生活",
+        "医疗",
+        "导航",
+        "新闻",
+        "美食佳饮",
+        "健康健美",
+        "报刊杂志",
+        "参考资料",
+        "摄影与录像",
+        "图形和设计",
+        "软件开发工具",
+    ]
     static var regionTypeLists: [String] = [
         "中国",
         "中国香港",

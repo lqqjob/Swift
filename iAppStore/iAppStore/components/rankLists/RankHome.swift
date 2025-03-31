@@ -75,6 +75,10 @@ extension RankHome {
             VStack {
                 Spacer().frame(height: 10)
                 Text(appRankModel.rankUpdated).font(.footnote)
+                RankSortView(rankName: $rankName, categoryName: $categoryName, regionName: $regionName) { rankName, categoryName, regionName in
+                    appRankModel.fetchRankData(rankName, categoryName, regionName)
+                }
+                .background(Color.clear)
                 Spacer()
             }
         }
