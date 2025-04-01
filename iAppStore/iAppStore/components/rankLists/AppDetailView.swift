@@ -45,6 +45,7 @@ struct AppDetailView: View {
             QRCodeView(title: "扫一扫下载", subTitle: "App Store 上的“\(item?.imName.label ?? appModel.app?.trackName ?? "")”", qrCodeContent: item?.id.label ?? appModel.app?.trackViewUrl ?? "error", isShowingQRCode: $isShowingQRCode)
         }
         .onAppear {
+            isAppFavorites = AppFavoritesModel.shared.search(appId) != nil
             if appModel.app == nil {
                 appModel.searchAppData(appId, nil, regionName)
             }
@@ -52,7 +53,15 @@ struct AppDetailView: View {
     }
     
     private func handleFavoriteButton(){
-            
+        if isAppFavorites {
+            AppFavoritesModel.shared.remove(appId:appId)
+        }else {
+            AppFavoritesModel.shared.add(AppFavorite(appId: appId, regionName: regionName))
+        }
+    
+        withAnimation {
+            isAppFavorites.toggle()
+        }
     }
 }
 

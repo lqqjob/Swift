@@ -15,7 +15,7 @@ struct RankHome: View {
     @StateObject private var appRankModel = AppRankModel()
     var body: some View {
         NavigationView {
-            ZStack {
+            ZStack(alignment: .top) {
                 if appRankModel.isLoading {
                     emptyView
                 }else {
