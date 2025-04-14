@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		D59F2BC52D2387150033387E /* iAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5BD619D2DACFD3000C1B501 /* TabViewCustom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabViewCustom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D57DDBF52D55A53A0085721D /* iAppStore */ = {
+		D5BD619F2DACFD3000C1B501 /* TabViewCustom */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iAppStore;
+			path = TabViewCustom;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D59F2BC22D2387150033387E /* Frameworks */ = {
+		D5BD619A2DACFD3000C1B501 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D59F2BBC2D2387150033387E = {
+		D5BD61942DACFD3000C1B501 = {
 			isa = PBXGroup;
 			children = (
-				D57DDBF52D55A53A0085721D /* iAppStore */,
-				D59F2BC62D2387150033387E /* Products */,
+				D5BD619F2DACFD3000C1B501 /* TabViewCustom */,
+				D5BD619E2DACFD3000C1B501 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D59F2BC62D2387150033387E /* Products */ = {
+		D5BD619E2DACFD3000C1B501 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D59F2BC52D2387150033387E /* iAppStore.app */,
+				D5BD619D2DACFD3000C1B501 /* TabViewCustom.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D59F2BC42D2387150033387E /* iAppStore */ = {
+		D5BD619C2DACFD3000C1B501 /* TabViewCustom */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D59F2BD32D2387170033387E /* Build configuration list for PBXNativeTarget "iAppStore" */;
+			buildConfigurationList = D5BD61AB2DACFD3100C1B501 /* Build configuration list for PBXNativeTarget "TabViewCustom" */;
 			buildPhases = (
-				D59F2BC12D2387150033387E /* Sources */,
-				D59F2BC22D2387150033387E /* Frameworks */,
-				D59F2BC32D2387150033387E /* Resources */,
+				D5BD61992DACFD3000C1B501 /* Sources */,
+				D5BD619A2DACFD3000C1B501 /* Frameworks */,
+				D5BD619B2DACFD3000C1B501 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D57DDBF52D55A53A0085721D /* iAppStore */,
+				D5BD619F2DACFD3000C1B501 /* TabViewCustom */,
 			);
-			name = iAppStore;
+			name = TabViewCustom;
 			packageProductDependencies = (
 			);
-			productName = iAppStore;
-			productReference = D59F2BC52D2387150033387E /* iAppStore.app */;
+			productName = TabViewCustom;
+			productReference = D5BD619D2DACFD3000C1B501 /* TabViewCustom.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D59F2BBD2D2387150033387E /* Project object */ = {
+		D5BD61952DACFD3000C1B501 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					D59F2BC42D2387150033387E = {
+					D5BD619C2DACFD3000C1B501 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = D59F2BC02D2387150033387E /* Build configuration list for PBXProject "iAppStore" */;
+			buildConfigurationList = D5BD61982DACFD3000C1B501 /* Build configuration list for PBXProject "TabViewCustom" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = D59F2BBC2D2387150033387E;
+			mainGroup = D5BD61942DACFD3000C1B501;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = D59F2BC62D2387150033387E /* Products */;
+			productRefGroup = D5BD619E2DACFD3000C1B501 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D59F2BC42D2387150033387E /* iAppStore */,
+				D5BD619C2DACFD3000C1B501 /* TabViewCustom */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D59F2BC32D2387150033387E /* Resources */ = {
+		D5BD619B2DACFD3000C1B501 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D59F2BC12D2387150033387E /* Sources */ = {
+		D5BD61992DACFD3000C1B501 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		D59F2BD12D2387170033387E /* Debug */ = {
+		D5BD61A92DACFD3100C1B501 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		D59F2BD22D2387170033387E /* Release */ = {
+		D5BD61AA2DACFD3100C1B501 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,16 +244,14 @@
 			};
 			name = Release;
 		};
-		D59F2BD42D2387170033387E /* Debug */ = {
+		D5BD61AC2DACFD3100C1B501 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iAppStore/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TabViewCustom/Preview Content\"";
 				DEVELOPMENT_TEAM = 459U2C6ZFU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -262,31 +260,27 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iAppStore1.lqqjob;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TabView.lqqjob.TabViewCustom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D59F2BD52D2387170033387E /* Release */ = {
+		D5BD61AD2DACFD3100C1B501 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iAppStore/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TabViewCustom/Preview Content\"";
 				DEVELOPMENT_TEAM = 459U2C6ZFU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,15 +289,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iAppStore1.lqqjob;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TabView.lqqjob.TabViewCustom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -313,25 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D59F2BC02D2387150033387E /* Build configuration list for PBXProject "iAppStore" */ = {
+		D5BD61982DACFD3000C1B501 /* Build configuration list for PBXProject "TabViewCustom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D59F2BD12D2387170033387E /* Debug */,
-				D59F2BD22D2387170033387E /* Release */,
+				D5BD61A92DACFD3100C1B501 /* Debug */,
+				D5BD61AA2DACFD3100C1B501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D59F2BD32D2387170033387E /* Build configuration list for PBXNativeTarget "iAppStore" */ = {
+		D5BD61AB2DACFD3100C1B501 /* Build configuration list for PBXNativeTarget "TabViewCustom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D59F2BD42D2387170033387E /* Debug */,
-				D59F2BD52D2387170033387E /* Release */,
+				D5BD61AC2DACFD3100C1B501 /* Debug */,
+				D5BD61AD2DACFD3100C1B501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D59F2BBD2D2387150033387E /* Project object */;
+	rootObject = D5BD61952DACFD3000C1B501 /* Project object */;
 }
