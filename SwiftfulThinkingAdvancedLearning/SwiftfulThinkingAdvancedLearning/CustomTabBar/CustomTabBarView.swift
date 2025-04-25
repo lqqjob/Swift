@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CustomTabBarView: View {
     let tabs:[TabBarItem]
-    @State private var selection:TabBarItem = TabBarItem(iconName: "house", title: "Home", color: Color.red)
+    @Binding var selection:TabBarItem
+
     var body: some View {
         HStack {
             ForEach(tabs,id: \.self) { item in
@@ -55,5 +56,5 @@ struct TabBarItem:Hashable {
         TabBarItem(iconName: "heart", title: "Favorites", color: Color.blue),
         TabBarItem(iconName: "person", title: "Profile", color: Color.green)
     ]
-    CustomTabBarView(tabs: tabs)
+    CustomTabBarView(tabs: tabs,selection: .constant(tabs.first!))
 }
