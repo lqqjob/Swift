@@ -21,18 +21,20 @@ struct CustomTabBarContainerView<Content:View>: View {
             content
                 .frame(maxWidth: .infinity ,maxHeight: .infinity)
                 .ignoresSafeArea()
-            CustomTabBarView(tabs: tabs,selection: $selection)
+            CustomTabBarView(tabs: tabs,selection: $selection, localSelection: selection)
+        }
+        .onPreferenceChange(TabBarItemsPreferenceKey.self) { value in
+            self.tabs = value
         }
     }
 }
 
 #Preview {
     let tabs :[TabBarItem] = [
-        TabBarItem(iconName: "house", title: "Home", color: Color.red),
-        TabBarItem(iconName: "heart", title: "Favorites", color: Color.blue),
-        TabBarItem(iconName: "person", title: "Profile", color: Color.green)
+        .home,.favorites,.message,.profile
     ]
     CustomTabBarContainerView(selection: .constant(tabs.first!)) {
-        Color.red
+        
+
     }
 }
